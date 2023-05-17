@@ -19,6 +19,6 @@ class GameObject : public IUpdateable
     void setPosition(Point position);
     virtual void update(char input) override;
     void move(char input);
-    virtual void render(char input);
+    virtual void render(Board &other);
     virtual void onCollision(GameObject &other);
 };

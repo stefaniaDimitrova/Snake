@@ -2,11 +2,11 @@
 #include "gameobject.hpp"
 
 int main()
-{
+{6+
     Board a(80,40);
 
-    GameObject b (Point (1,1), Control('w','s','a','d'), 'o', a);
-    GameObject c(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
+    GameObject player1 (Point (1,1), Control('w','s','a','d'), 'o', a);
+    GameObject player2(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
 
     char input;
     std::cin >> input;
@@ -14,18 +14,16 @@ int main()
     {    
         if (input == 'w' || input == 'a' || input == 's' || input == 'd')
         {
-            b.render(input);
+            player1.update(input);
         }
         else if (input == 'o' || input == 'k' || input == 'l' || input == ';')
         {
-            c.render(input);
+            player2.update(input);
         }
-        
-        a.clear();
-        a.setCell(b.getPosition(),b.getSymbol());
-        a.setCell(c.getPosition(),c.getSymbol());
-        system("cls");
+        player1.render(a);
+        player2.render(a);
         a.render();
+        a.clear();
 
         std::cin >> input;
     }

@@ -54,9 +54,10 @@ void GameObject::move(char input)
         }
     }
 
-void GameObject::render(char input)
+void GameObject::render(Board &other)
 {
-    this->update(input);
+    other.setCell(this->position,this->symbol);
+    system("cls");
 }
 
 void GameObject::onCollision(GameObject &other)
