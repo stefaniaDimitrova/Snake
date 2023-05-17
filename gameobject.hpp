@@ -7,9 +7,6 @@
 
 class GameObject : public IUpdateable
 {
-    private:
-    
-
     protected:
     Point position;
     Control ctrl;
@@ -20,8 +17,8 @@ class GameObject : public IUpdateable
     Point getPosition() const;
     char getSymbol() const;
     void setPosition(Point position);
-    virtual void update() override;
-    void move();
-    virtual void render();
+    virtual void update(char input) override;
+    void move(char input);
+    virtual void render(char input);
     virtual void onCollision(GameObject &other);
 };

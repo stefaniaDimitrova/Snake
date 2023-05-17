@@ -21,4 +21,6 @@ class Board
     int getWidth () const;
     int getHeight() const;
     void render();
+
+    virtual ~Board() = default;
 };

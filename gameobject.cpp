@@ -19,20 +19,19 @@ void GameObject::setPosition(Point position)
     this->position = position;
 }
 
-void GameObject::update()
+void GameObject::update(char input)
 {
     //update position using user input
     
-    return this->move();
+    this->move(input);
 
 
     //check for collision
+    
 }
 
-void GameObject::move()
+void GameObject::move(char input)
 {   
-        char input;
-        std::cin >> input;
         if (input == ctrl.down)
         {
             position.y++;
@@ -55,9 +54,9 @@ void GameObject::move()
         }
     }
 
-void GameObject::render()
+void GameObject::render(char input)
 {
-    this->update();
+    this->update(input);
 }
 
 void GameObject::onCollision(GameObject &other)

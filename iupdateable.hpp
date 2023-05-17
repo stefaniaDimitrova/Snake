@@ -3,5 +3,5 @@
 class IUpdateable
 {
     public:
-    virtual void update() = 0;
+    virtual void update(char input) = 0;
 };

@@ -5,5 +5,7 @@
 class Food : public GameObject
 {
     public:
-    void onCollision() override;
+    void onCollision(GameObject &other) override;
+
+    virtual ~Food() = default;
 };
