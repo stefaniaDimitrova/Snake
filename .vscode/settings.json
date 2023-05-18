@@ -3,4 +3,7 @@
         "${workspaceFolder}/**",
         "D:/Libraries/SFML/inclide"
     ],
+    "files.associations": {
+        "vector": "cpp"
+    },
 }

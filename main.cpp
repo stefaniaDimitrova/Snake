@@ -1,32 +1,32 @@
 #include "board.hpp"
-#include "gameobject.hpp"
+#include "snake.hpp"
 #include "Windows.h"
 #include "iomanip"
 
 int main()
 {
-    Board a(80,40);
+    Board board(60,30);
 
-    GameObject player1 (Point (1,1), Control('w','s','a','d'), 'o', a);
-    // GameObject player2(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
+    Snake player1(Point (10,5),'o', board, Direction::RIGHT, Control('w','s','a','d'));
+
 
     char input;
-
     //have to hide the cursor
     std::cout <<"Press any key to start the game" << std::endl;
     input = _getch();
     std::cout << "Game has stearted!" << std::endl;
+    int i = 0;
     while (input != 'q')
     {    
         while(!_kbhit())
         {
             //make them both move at the same time
         player1.update(input);
+        player1.render(board);
         // player2.update(input);
-        player1.render(a);
         // player2.render(a);
-        a.render();
-        a.clear();
+        board.render();
+        board.clear();
         }
         input = _getch();
     } 
