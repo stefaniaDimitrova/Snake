@@ -1,34 +1,37 @@
 #include "board.hpp"
 #include "gameobject.hpp"
 #include "Windows.h"
+#include "iomanip"
 
 int main()
 {
     Board a(80,40);
 
     GameObject player1 (Point (1,1), Control('w','s','a','d'), 'o', a);
-    GameObject player2(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
+    // GameObject player2(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
 
     char input;
+
+    //have to hide the cursor
+    std::cout <<"Press any key to start the game" << std::endl;
     input = _getch();
+    std::cout << "Game has stearted!" << std::endl;
     while (input != 'q')
     {    
-        if (input == 'w' || input == 'a' || input == 's' || input == 'd')
+        while(!_kbhit())
         {
-            player1.update(input);
-        }
-        else if (input == 'o' || input == 'k' || input == 'l' || input == ';')
-        {
-            player2.update(input);
-        }
+            //make them both move at the same time
+        player1.update(input);
+        // player2.update(input);
         player1.render(a);
-        player2.render(a);
+        // player2.render(a);
         a.render();
         a.clear();
-
+        }
         input = _getch();
-        SetCursor(NULL);
-    }
+    } 
+    
+
     
     return 0;
 }
