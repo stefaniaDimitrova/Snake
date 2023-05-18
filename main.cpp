@@ -1,15 +1,16 @@
 #include "board.hpp"
 #include "gameobject.hpp"
+#include "Windows.h"
 
 int main()
-{6+
+{
     Board a(80,40);
 
     GameObject player1 (Point (1,1), Control('w','s','a','d'), 'o', a);
     GameObject player2(Point(5,5), Control('o', 'l', 'k', ';'), '*', a);
 
     char input;
-    std::cin >> input;
+    input = _getch();
     while (input != 'q')
     {    
         if (input == 'w' || input == 'a' || input == 's' || input == 'd')
@@ -25,7 +26,8 @@ int main()
         a.render();
         a.clear();
 
-        std::cin >> input;
+        input = _getch();
+        SetCursor(NULL);
     }
     
     return 0;

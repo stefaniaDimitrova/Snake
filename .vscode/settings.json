@@ -1,5 +1,6 @@
 {
-    "files.associations": {
-        "iostream": "cpp"
-    }
+    "includePath" : [
+        "${workspaceFolder}/**",
+        "D:/Libraries/SFML/inclide"
+    ],
 }

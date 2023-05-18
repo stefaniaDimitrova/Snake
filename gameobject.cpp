@@ -62,5 +62,5 @@ void GameObject::render(Board &other)
 
 void GameObject::onCollision(GameObject &other)
 {
-
+    //what happens here?
 }
