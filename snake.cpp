@@ -13,19 +13,19 @@ void Snake::moveHead(GameObject &bodyPart)
 {  
     if (this->currentDirection == Direction::DOWN)
     {
-       bodyPart.setPosition(Point(this->position.x, this->position.y++));
+       bodyPart.setPosition(getNextPosition(bodyPart.getPosition(),currentDirection));
     }
     else if (this->currentDirection == Direction::UP)
     {
-        bodyPart.setPosition(Point(this->position.x, this->position.y--));
+        bodyPart.setPosition(getNextPosition(bodyPart.getPosition(),currentDirection));
     }
     else if (this->currentDirection == Direction::RIGHT)
     {
-        bodyPart.setPosition(Point(this->position.x++, this->position.y));
+        bodyPart.setPosition(getNextPosition(bodyPart.getPosition(),currentDirection));
     }
     else if (this->currentDirection == Direction::LEFT)
     {
-        bodyPart.setPosition(Point(this->position.x--, this->position.y));
+        bodyPart.setPosition(getNextPosition(bodyPart.getPosition(),currentDirection));
     } 
 }
 
@@ -44,11 +44,12 @@ void Snake::MoveBody(Point head)
     
 }
 
-void Snake::update(char input)
+void Snake::update(char input, Board &board)
 {
     Point head = this->body.front().getPosition();
     this->changeDirection(input);
-    MoveBody(head);
+    this->onCollision(board);
+    this->MoveBody(head);
 }
 
 void Snake::changeDirection(char input)
@@ -76,7 +77,7 @@ void Snake::changeDirection(char input)
 
 void Snake::grow()
 {
-
+    
 }
 
 void Snake::render(Board &board)
@@ -88,7 +89,60 @@ void Snake::render(Board &board)
     system("cls");
 }
 
-bool Snake::checkCollision()
+Point Snake::getNextPosition(Point position, Direction direction)
 {
+    switch (direction)
+    {
+    case Direction::UP:
+        position.y--;
+        break;
+    case Direction::DOWN:
+        position.y++;
+        break;
+    case Direction::RIGHT:
+        position.x++;
+        break;
+    case Direction::LEFT:
+        position.x--;
+        break;
+    }
+
+    return position;
+}
+
+bool Snake::checkCollision(GameObject head,Board &board)
+{
+    Point next = getNextPosition(head.getPosition(), currentDirection);
+    char a = board.getCell(next);
+
+    if (a != ' ')
+    {
+        return true;
+    }
+    
     return false;
+}
+
+void Snake::onCollision(Board &board)
+{
+    if (checkCollision(this->body.front(), board))
+    {
+        Point next = getNextPosition(this->body.front().getPosition(),currentDirection);
+        switch (board.getCell(next))
+        {
+        case '|':
+        changeDirection(this->ctrl.getDown());
+        if(checkCollision(this->body.front(),board)) changeDirection(this->ctrl.getUp());  
+        board.clear();        
+        case '+':
+            this->length++;
+            break;
+        case '~':
+            this->length--;
+            break;
+        default:
+            // throw "Game over!";
+            break;
+        }
+    }
 }

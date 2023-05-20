@@ -5,7 +5,7 @@
 
 int main()
 {
-    Board board(60,30);
+    Board board(46,23);
 
     Snake player1(Point (10,5),'o', board, Direction::RIGHT, Control('w','s','a','d'));
 
@@ -21,7 +21,7 @@ int main()
         while(!_kbhit())
         {
             //make them both move at the same time
-        player1.update(input);
+        player1.update(input, board);
         player1.render(board);
         // player2.update(input);
         // player2.render(a);

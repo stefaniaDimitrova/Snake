@@ -24,9 +24,9 @@ void GameObject::setSymbol(char symbol)
     this->symbol = symbol;
 }
 
-void GameObject::update(char input) 
+void GameObject::update(char input, Board &board) 
 {
-    //spawn
+    
 }
 
 void GameObject::render(Board &other)
@@ -35,7 +35,10 @@ void GameObject::render(Board &other)
     system("cls");
 }
 
-void GameObject::onCollision(GameObject &other)
+void GameObject::onCollision(Board &board)
 {
-    //what happens here?
+    if (board.getCell(this->getPosition()) != ' ')
+    {
+        board.clear();
+    }
 }

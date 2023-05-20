@@ -31,8 +31,8 @@ void Board::clear()
 
 bool Board::notBorder(Point position)
 {
-    if (position.y == 0 || position.y == height-1 
-        || position.x == 0 || position.x == width-1)
+    if (position.y <= 0 || position.y >= height-1 
+        || position.x <= 0 || position.x >= width-1)
     {
         return false;
     }

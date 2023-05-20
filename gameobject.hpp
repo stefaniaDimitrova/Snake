@@ -19,8 +19,8 @@ class GameObject : public IUpdateable
     void setPosition(Point position);
     void setSymbol(char symbol);
     //more validations to be added?
-    virtual void update(char input) override;
+    virtual void update(char input, Board &board) override;
     virtual void render(Board &other);
     //what happens here?
-    virtual void onCollision(GameObject &other);
+    virtual void onCollision(Board &board);
 };
