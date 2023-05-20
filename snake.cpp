@@ -46,9 +46,9 @@ void Snake::MoveBody(Point head)
 
 void Snake::update(char input, Board &board)
 {
-    Point head = this->body.front().getPosition();
     this->changeDirection(input);
     this->onCollision(board);
+    Point head = this->body.front().getPosition();
     this->MoveBody(head);
 }
 
@@ -131,9 +131,26 @@ void Snake::onCollision(Board &board)
         switch (board.getCell(next))
         {
         case '|':
-        changeDirection(this->ctrl.getDown());
-        if(checkCollision(this->body.front(),board)) changeDirection(this->ctrl.getUp());  
-        board.clear();        
+            this->changeDirection(this->ctrl.getDown());
+            if (checkCollision(this->body.front(),board))
+            {
+                this->changeDirection(this->ctrl.getUp());
+            }
+            break;  
+        case '_':
+            this->changeDirection(this->ctrl.getLeft());
+            if (checkCollision(this->body.front(),board))
+            {
+                this->changeDirection(this->ctrl.getRight());
+            }
+            break;
+        case '-':
+            this->changeDirection(this->ctrl.getRight());
+            if (checkCollision(this->body.front(), board))
+            {
+                this->changeDirection(this->ctrl.getLeft());
+            }
+            break;
         case '+':
             this->length++;
             break;
