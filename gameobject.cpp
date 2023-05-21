@@ -1,9 +1,6 @@
 #include "gameobject.hpp"
 
-GameObject::GameObject(char symbol, Board &board) : symbol(symbol) 
-{
-    board.setCell(position,symbol);
-}
+GameObject::GameObject(char symbol, Board &board) : symbol(symbol) {}
 
 Point GameObject::getPosition() const
 {
@@ -24,7 +21,7 @@ void GameObject::setSymbol(char symbol)
     this->symbol = symbol;
 }
 
-void GameObject::spawn(Board&board)
+void GameObject::spawn(Board &board)
 {
     unsigned int seed_value;
     srand(seed_value);

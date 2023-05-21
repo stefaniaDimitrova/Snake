@@ -9,7 +9,7 @@ class Food : public GameObject
 
     public:
     Food(char symbol, Board &board);
-    void onCollision(Board &board) override;
+    virtual void onCollision(Board &board) override;
     virtual void update(Board &board);
 
     virtual ~Food() = default;

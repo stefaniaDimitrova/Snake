@@ -161,7 +161,9 @@ void Snake::onCollision(Board &board)
                 this->changeDirection(this->ctrl.getLeft());
             }
             break;
-        case 'r':
+        case '+':
+            board.setCell(Point(1,1),'w');
+            this->body.push_back(GameObject(this->symbol,board));
             this->length++;
             break;
         case '~':

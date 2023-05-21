@@ -3,9 +3,8 @@
 Food::Food (char symbol, Board &board) : GameObject(symbol,board) 
 {
     this->spawn(board);
-    std::cout << "food" << std::endl;
-    std::cout << "x: " << this->getPosition().x<< " y: " << this->getPosition().y<< std::endl; 
-
+    this->count ++;
+    board.setCell(this->getPosition(),this->symbol);
 }
 
 void Food::onCollision(Board &board)
@@ -13,12 +12,13 @@ void Food::onCollision(Board &board)
     if (board.getCell(this->getPosition()) != '+')
     {
         board.setCell(this->getPosition(), ' ');
+        count --;
     }
-    count --;
 }
 
 void Food::update(Board &board)
 {
+   this-> onCollision(board);
     if (count < 1)
     {
         this->spawn(board);
