@@ -1,12 +1,13 @@
 #include "snake.hpp"
 
-Snake::Snake(Point start, char symbol, Board &board, Direction direction,Control ctrl) : GameObject(start,symbol,board), currentDirection(direction),ctrl(ctrl)
+Snake::Snake(char symbol, Board &board, Direction direction,Control ctrl) : GameObject(symbol,board), currentDirection(direction),ctrl(ctrl)
 {
-    this->length = 6;
+    this->length = 1;
     for (size_t i = 0; i < this->length; i++)
     {
-        this->body.push_back(GameObject(Point(start.x -i,start.y),symbol,board));
+        this->body.push_back(GameObject(symbol,board));
     } 
+    this->body.front().spawn(board);
 }
 
 void Snake::moveHead(GameObject &bodyPart)
@@ -46,6 +47,7 @@ void Snake::MoveBody(Point head)
 
 void Snake::update(char input, Board &board)
 {
+    
     this->changeDirection(input);
     this->onCollision(board);
     Point head = this->body.front().getPosition();

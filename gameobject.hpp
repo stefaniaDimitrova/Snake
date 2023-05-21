@@ -6,20 +6,21 @@
 #include "conio.h"
 #include <iostream>
 
-class GameObject : public IUpdateable
+class GameObject : public ISpawner
 {
     protected:
     Point position;
     char symbol;
 
     public:
-    GameObject(Point position, char symbol, Board &board);
+    GameObject(char symbol, Board &board);
     Point getPosition() const;
     char getSymbol() const;
     void setPosition(Point position);
     void setSymbol(char symbol);
     //more validations to be added?
-    virtual void update(char input, Board &board) override;
+    virtual void spawn(Board &board) override;
+    virtual void update(Board &board);
     virtual void render(Board &other);
     //what happens here?
     virtual void onCollision(Board &board);

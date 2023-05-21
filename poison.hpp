@@ -1,10 +1,10 @@
 #pragma once
-#include "gameobject.hpp"
+#include "food.hpp"
 
-class Poison : public GameObject
+class Poison : public Food
 {
     public:
-    void onCollision(GameObject &other) override;
+    Poison(char symbol, Board &board);
 
     virtual ~Poison() = default;
 };

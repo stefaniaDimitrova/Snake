@@ -1,8 +1,8 @@
 #pragma once
 #include "board.hpp"
 
-class IUpdateable
+class ISpawner
 {
     public:
-    virtual void update(char input, Board &board) = 0;
+    virtual void spawn(Board &board) = 0;
 };

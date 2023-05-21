@@ -7,7 +7,7 @@ int main()
 {
     Board board(46,23);
 
-    Snake player1(Point (10,5),'o', board, Direction::RIGHT, Control('w','s','a','d'));
+    Snake player1('o', board, Direction::RIGHT, Control('w','s','a','d'));
 
 
     char input;

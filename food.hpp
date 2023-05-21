@@ -4,8 +4,13 @@
 
 class Food : public GameObject
 {
+    protected :
+    unsigned count = 0;
+
     public:
-    void onCollision(GameObject &other) override;
+    Food(char symbol, Board &board);
+    void onCollision(Board &board) override;
+    virtual void update(Board &board);
 
     virtual ~Food() = default;
 };
