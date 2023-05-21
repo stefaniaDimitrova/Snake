@@ -7,7 +7,15 @@ Snake::Snake(char symbol, Board &board, Direction direction,Control ctrl) : Game
     {
         this->body.push_back(GameObject(symbol,board));
     } 
+    std::cout << "Snake" << std::endl;
     this->body.front().spawn(board);
+    std::cout << "x: " << this->body.front().getPosition().x<< " y: " << this->body.front().getPosition().y<< std::endl; 
+
+}
+
+const int Snake::getLength() const
+{
+    return this->length;
 }
 
 void Snake::moveHead(GameObject &bodyPart)
@@ -153,7 +161,7 @@ void Snake::onCollision(Board &board)
                 this->changeDirection(this->ctrl.getLeft());
             }
             break;
-        case '+':
+        case 'r':
             this->length++;
             break;
         case '~':

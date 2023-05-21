@@ -1,9 +1,8 @@
 #include "gameobject.hpp"
 
-GameObject::GameObject(char symbol, Board &board) : position(position),symbol(symbol) 
+GameObject::GameObject(char symbol, Board &board) : symbol(symbol) 
 {
     board.setCell(position,symbol);
-    this->spawn(board);
 }
 
 Point GameObject::getPosition() const
@@ -36,7 +35,7 @@ void GameObject::spawn(Board&board)
 
 void GameObject::update(Board &board) 
 {
-    board.setCell(this->getPosition(), this->getSymbol());
+
 }
 
 void GameObject::render(Board &other)

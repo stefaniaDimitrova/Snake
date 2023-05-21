@@ -13,7 +13,7 @@ class Snake : public GameObject
     
     public:
     Snake(char symbol, Board &board, Direction direction,Control ctrl);
-
+    const int getLength() const;
     void moveHead(GameObject &bodyPart);
     void MoveBody(Point last);
     void changeDirection(char input);

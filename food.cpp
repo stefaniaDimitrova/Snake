@@ -1,7 +1,11 @@
 #include "food.hpp"
 
-Food::Food (char symbol, Board &board) : GameObject(symbol,board) {
+Food::Food (char symbol, Board &board) : GameObject(symbol,board) 
+{
     this->spawn(board);
+    std::cout << "food" << std::endl;
+    std::cout << "x: " << this->getPosition().x<< " y: " << this->getPosition().y<< std::endl; 
+
 }
 
 void Food::onCollision(Board &board)
