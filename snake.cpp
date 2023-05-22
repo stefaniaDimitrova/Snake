@@ -65,21 +65,38 @@ void Snake::changeDirection(char input)
 {
     if (input == ctrl.getDown())
     {
+        if (this->currentDirection == Direction::UP)
+        {
+            return;
+        }
+        
         this->currentDirection = Direction::DOWN;
     }
 
     if (input == ctrl.getUp())
     {
+         if (this->currentDirection == Direction::DOWN)
+        {
+            return;
+        }
         this->currentDirection = Direction::UP;
     }
 
     if (input == ctrl.getLeft())
     {
+         if (this->currentDirection == Direction::RIGHT)
+        {
+            return;
+        }
         this->currentDirection = Direction::LEFT;
     }
 
     if (input == ctrl.getRight())
     {
+         if (this->currentDirection == Direction::LEFT)
+        {
+            return;
+        }
         this->currentDirection = Direction::RIGHT;
     }   
 }
