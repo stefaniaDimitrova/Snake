@@ -24,14 +24,14 @@ int main()
         while(!_kbhit())
         {
         food.render(board);
-        poison.render(board);
+        // poison.render(board);
         player1.update(input, board);
         player1.render(board);
         // player2.update(input);
         // player2.render(a);
         board.render();
         food.update(board);
-        poison.update(board);
+        // poison.update(board);
         board.clear();
         }
         input = _getch();

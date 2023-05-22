@@ -55,7 +55,6 @@ void Snake::MoveBody(Point head)
 
 void Snake::update(char input, Board &board)
 {
-    
     this->changeDirection(input);
     this->onCollision(board);
     Point head = this->body.front().getPosition();
