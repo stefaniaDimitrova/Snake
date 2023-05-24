@@ -23,10 +23,23 @@ void GameObject::setSymbol(char symbol)
 
 void GameObject::spawn(Board &board)
 {
-    unsigned int seed_value;
-    srand(seed_value);
-    int random_x = 1 + (rand() % board.getWidth() - 1);
-    int random_y = 1 + (rand() % board.getHeight() - 1);
+    // int seed_value;
+    // srand(seed_value);
+    // int random_x = 1 + (rand() % board.getWidth() - 1);
+    // int random_y = 1 + (rand() % board.getHeight() - 1);
+    // if (seed_value < 0)
+    // {
+    //     seed_value *= -1;
+    // }
+    
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution <> dis_x(1,board.getWidth()-1);
+    std::uniform_int_distribution <> dis_y(1,board.getHeight()-1);
+    int random_x = dis_x(gen);
+    int random_y = dis_y(gen);
+
     this->setPosition(Point(random_x,random_y));
 }
 

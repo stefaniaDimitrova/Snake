@@ -1,16 +1,12 @@
 #pragma once
-#include "gameobject.hpp"
+#include "food.hpp"
 
-class Poison : public GameObject
+class Poison : public Food
 {
-    protected:
-    unsigned counter = 0;
-
     public:
     Poison(char symbol, Board &board);
 
     virtual void onCollision(Board &board) override;
-    virtual void update(Board &board) override;
 
     virtual ~Poison() = default;
 };

@@ -4,6 +4,7 @@
 #include "board.hpp"
 #include "controls.hpp"
 #include "conio.h"
+#include <random>
 #include <iostream>
 
 class GameObject : public ISpawner

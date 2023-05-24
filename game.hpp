@@ -6,6 +6,13 @@
 class Game
 {
     protected:
-    Board a;
-    std::vector <GameObject> eatable;
+    Board board;
+    std::vector <GameObject> eatables;
+    unsigned num = 20;
+    std::vector<Snake> players;
+    unsigned play;
+
+    public:
+    Game();
+    void start();
 };

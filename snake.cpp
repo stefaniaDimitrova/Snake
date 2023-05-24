@@ -1,21 +1,27 @@
 #include "snake.hpp"
+#include <stdlib.h>
 
 Snake::Snake(char symbol, Board &board, Direction direction,Control ctrl) : GameObject(symbol,board), currentDirection(direction),ctrl(ctrl)
 {
+    std::cout << "Snake:" << std::endl;
     this->length = 1;
     for (size_t i = 0; i < this->length; i++)
     {
         this->body.push_back(GameObject(symbol,board));
     } 
-    std::cout << "Snake" << std::endl;
     this->body.front().spawn(board);
-    std::cout << "x: " << this->body.front().getPosition().x<< " y: " << this->body.front().getPosition().y<< std::endl; 
 
+    std::cout << this->body.front().getPosition().x << " " << this->body.front().getPosition().y << std::endl;
 }
 
 const int Snake::getLength() const
 {
     return this->length;
+}
+
+bool Snake::getGameOver()
+{
+    return this->game_over;
 }
 
 void Snake::moveHead(GameObject &bodyPart)
@@ -64,39 +70,39 @@ void Snake::update(char input, Board &board)
 void Snake::changeDirection(char input)
 {
     if (input == ctrl.getDown())
-    {
-        // if (this->currentDirection == Direction::UP)
-        // {
-        //     return;
-        // }
+    {        
+        if (this->currentDirection == Direction::UP && this->collided == false)
+        {
+            return;
+        }
         
         this->currentDirection = Direction::DOWN;
     }
 
     if (input == ctrl.getUp())
     {
-        //  if (this->currentDirection == Direction::DOWN)
-        // {
-        //     return;
-        // }
+         if (this->currentDirection == Direction::DOWN && this->collided == false)
+        {
+            return;
+        }
         this->currentDirection = Direction::UP;
     }
 
     if (input == ctrl.getLeft())
     {
-        //  if (this->currentDirection == Direction::RIGHT)
-        // {
-        //     return;
-        // }
+         if (this->currentDirection == Direction::RIGHT && this->collided == false)
+        {
+            return;
+        }
         this->currentDirection = Direction::LEFT;
     }
 
     if (input == ctrl.getRight())
     {
-        //  if (this->currentDirection == Direction::LEFT)
-        // {
-        //     return;
-        // }
+         if (this->currentDirection == Direction::LEFT && this->collided == false)
+        {
+            return;
+        }
         this->currentDirection = Direction::RIGHT;
     }   
 }
@@ -108,7 +114,7 @@ void Snake::grow()
 
 void Snake::render(Board &board)
 {    
-    for (size_t i = 0; i < this->length; i++)
+    for (size_t i = 0; i < this->body.size(); i++)
     {
         board.setCell(this->body[i].getPosition(), this->body[i].getSymbol());
     }
@@ -145,18 +151,26 @@ bool Snake::checkCollision(GameObject head,Board &board)
     {
         return true;
     }
+
+    // if (a == this->symbol)
+    // {
+    //     return true;
+    // }
+    
     
     return false;
 }
 
 void Snake::onCollision(Board &board)
 {
+    this->collided = false;
     if (checkCollision(this->body.front(), board))
     {
         Point next = getNextPosition(this->body.front().getPosition(),currentDirection);
         switch (board.getCell(next))
         {
         case '|':
+            this->collided = true;
             this->changeDirection(this->ctrl.getDown());
             if (checkCollision(this->body.front(),board))
             {
@@ -164,6 +178,7 @@ void Snake::onCollision(Board &board)
             }
             break;  
         case '_':
+            this->collided = true;
             this->changeDirection(this->ctrl.getLeft());
             if (checkCollision(this->body.front(),board))
             {
@@ -182,11 +197,14 @@ void Snake::onCollision(Board &board)
             this->length++;
             break;
         case '~':
+            this->body.pop_back();
             this->length--;
             break;
-        default:
-            // throw "Game over!";
-            break;
+            //default:
+            // if (board.getCell(this->body.front().getPosition()) == 'o')
+            // {
+            //     this->game_over = true;
+            // }
         }
     }
 }

@@ -6,6 +6,8 @@
 class Snake : public GameObject
 {
     protected:
+    bool game_over = false;
+    bool collided = false;
     int length;
     std::vector <GameObject> body;
     Direction currentDirection;
@@ -17,6 +19,7 @@ class Snake : public GameObject
     void moveHead(GameObject &bodyPart);
     void MoveBody(Point last);
     void changeDirection(char input);
+    bool getGameOver();
     Point getNextPosition(Point position, Direction direction);
     void grow();
     virtual void update(char input, Board &board);
