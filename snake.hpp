@@ -39,7 +39,6 @@ class Snake : public GameObject
     // void setControls(Control ctrl);
     void changeDirection(char input);
     Point getNextPosition(Point position, Direction direction);
-    void grow();
     virtual void update(char input, Board &board);
     bool checkCollision(GameObject head, Board &board);
     virtual void onCollision(Board &board) override;

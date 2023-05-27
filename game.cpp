@@ -46,11 +46,6 @@ int Game::generateRandomFood()
     std::mt19937 gen(rd());
     std::uniform_int_distribution <> dis_x(1,2);
     int random = dis_x(gen);
-
-    // this->eatables.reserve(10);
-
-    // this->eatables[random-1].update(this->board);
-
     return random;
     
 }
@@ -59,7 +54,6 @@ void Game::start()
 {
     char input;
     input = _getch();
-    this->players[1].setAssisted(true);
     while (!gameOver() && input != 'q')
     {   
         while(!_kbhit() && !gameOver())

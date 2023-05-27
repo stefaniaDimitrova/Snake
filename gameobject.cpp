@@ -25,16 +25,7 @@ void GameObject::setSymbol(char symbol)
 
 void GameObject::spawn(Board &board)
 {
-    // int seed_value;
-    // srand(seed_value);
-    // int random_x = 1 + (rand() % board.getWidth() - 1);
-    // int random_y = 1 + (rand() % board.getHeight() - 1);
-    // if (seed_value < 0)
-    // {
-    //     seed_value *= -1;
-    // }
-    
-    //used code 
+    //used code for the spawner
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution <> dis_x(2,board.getWidth()-2);
@@ -43,11 +34,6 @@ void GameObject::spawn(Board &board)
     int random_y = dis_y(gen);
 
     this->setPosition(Point(random_x,random_y));
-}
-
-void GameObject::update(Board &board) 
-{
-
 }
 
 void GameObject::render(Board &other)

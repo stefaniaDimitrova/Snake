@@ -20,10 +20,7 @@ class GameObject : public ISpawner
     char getSymbol() const;
     void setPosition(Point position);
     void setSymbol(char symbol);
-    //more validations to be added?
     virtual void spawn(Board &board) override;
-    virtual void update(Board &board);
     virtual void render(Board &other);
-    //what happens here?
     virtual void onCollision(Board &board);
 };

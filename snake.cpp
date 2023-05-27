@@ -290,14 +290,7 @@ bool Snake::checkCollision(GameObject head,Board &board)
     if (a != ' ')
     {
         return true;
-    }
-
-    // if (a == this->symbol)
-    // {
-    //     return true;
-    // }
-    
-    
+    }    
     return false;
 }
 
@@ -342,9 +335,6 @@ void Snake::onCollision(Board &board)
             this->length++;
             break;
         case '~':
-            // std::ofstream ofs("log.txt", std::ios::app);
-            // ofs << "Snake position: " << this -> position.x << ' ' << this -> position.y << '\n';
-            // ofs.close();
             this->body.pop_back();
             this->length--;
             break;

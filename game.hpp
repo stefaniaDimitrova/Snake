@@ -11,13 +11,10 @@ class Game
     protected:
 
     Board board;
-    // std::vector<Food> eatables;
     Food food;
     Poison poison;
     int counter = 0;
     std::vector<Snake> players;
-    // Snake player1;
-    // Snake player2;
     unsigned player = 2;
 
     public:
