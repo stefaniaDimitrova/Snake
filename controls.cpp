@@ -1,5 +1,7 @@
 #include"controls.hpp"
 
+Control::Control() : up(' '), down(' '), left(' '), right(' ') {}
+
 Control::Control(char up, char down, char left, char right) :
                 up(up), down(down), left(left), right(right){}
 

@@ -1,25 +1,43 @@
 #pragma once
 #include "gameobject.hpp"
-#include "vector"
+#include <vector>
 #include "direction.hpp"
+#include <algorithm>
 
 class Snake : public GameObject
 {
     protected:
-    bool game_over = false;
     bool collided = false;
+    bool hit = false;
+    bool ate = true;
+    bool assisted = false;
+    int speed = 1;
+    int position = 0;
+    Point objective;
     int length;
+    std::vector<Point> shortest_path;
     std::vector <GameObject> body;
     Direction currentDirection;
     Control ctrl;
     
     public:
+    Snake();
     Snake(char symbol, Board &board, Direction direction,Control ctrl);
     const int getLength() const;
     void moveHead(GameObject &bodyPart);
     void MoveBody(Point last);
+    void setSpeed(int speed);
+    bool getAte() const;
+    bool getAssisted() const;
+    void setObjective(Point obj);
+    void setAssisted(bool a);
+    bool isValidPosition(Point position, Board &board);
+    std::vector<Point> bfs(Board& board, Point start, Point food);
+    bool getHit();
+    void assistedMove(Board &board);
+    // void setDirection(Direction dir);
+    // void setControls(Control ctrl);
     void changeDirection(char input);
-    bool getGameOver();
     Point getNextPosition(Point position, Direction direction);
     void grow();
     virtual void update(char input, Board &board);

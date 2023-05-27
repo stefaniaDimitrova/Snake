@@ -6,6 +6,7 @@ class Control
     char up, down, left, right;
 
     public:
+    Control();
     Control(char up, char down, char left, char right);
 
     const char getUp() const;

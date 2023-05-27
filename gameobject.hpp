@@ -14,6 +14,7 @@ class GameObject : public ISpawner
     char symbol;
 
     public:
+    GameObject();
     GameObject(char symbol, Board &board);
     Point getPosition() const;
     char getSymbol() const;

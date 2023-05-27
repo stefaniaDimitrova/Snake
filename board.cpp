@@ -1,22 +1,6 @@
 #include "board.hpp"
 
-Board::Board(int width, int height) : width(width), height(height)
-{
-    //resizing the game board to height and width and initialising each space with a space char
-    grid.resize(height,std::vector<char> (width, ' '));
-    for (size_t i = 0; i < this->height; i++)
-    {
-        this->grid[i][0] = '|';
-        this->grid[i][width-1] = '|';
-    }
-    for (size_t i = 0; i < this->width; i++)
-    {
-        this->grid[0][i] = '_';
-        this->grid[height-1][i] = '-';
-    }
-    
-    
-}
+Board::Board() : width(0), height(0) {}
 
 void Board::clear()
 {
@@ -40,14 +24,24 @@ bool Board::notBorder(Point position)
     
 }
 
+void Board::setWidth(int a)
+{
+    this->width = a;
+}
+
+void Board::setHeight(int a)
+{
+    this->height = a;
+}
+
 void Board::setCell(Point position, char symbol)
 {
     if (!notBorder(position))
     {
-        //exception
         std::cout << "You cannot acces the border!" << std::endl;
         return;
     }
+
     this->grid[position.y][position.x] = symbol;
 }
 
@@ -64,6 +58,23 @@ int Board::getWidth() const
 int Board::getHeight() const
 {
     return this->height;
+}
+
+void Board::generateGrid()
+{
+    
+    grid.resize(height,std::vector<char> (width, ' '));
+    for (size_t i = 0; i < this->height; i++)
+    {
+        this->grid[i][0] = '|';
+        this->grid[i][width-1] = '|';
+    }
+    for (size_t i = 0; i < this->width; i++)
+    {
+        this->grid[0][i] = '_';
+        this->grid[height-1][i] = '-';
+    }
+    
 }
 
 void Board::render()

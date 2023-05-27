@@ -4,6 +4,7 @@
 class Poison : public Food
 {
     public:
+    Poison();
     Poison(char symbol, Board &board);
 
     virtual void onCollision(Board &board) override;

@@ -1,5 +1,7 @@
 #include "gameobject.hpp"
 
+GameObject::GameObject() : position(Point(1,1)), symbol(' ') {}
+
 GameObject::GameObject(char symbol, Board &board) : symbol(symbol) {}
 
 Point GameObject::getPosition() const
@@ -32,11 +34,11 @@ void GameObject::spawn(Board &board)
     //     seed_value *= -1;
     // }
     
-
+    //used code 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution <> dis_x(1,board.getWidth()-1);
-    std::uniform_int_distribution <> dis_y(1,board.getHeight()-1);
+    std::uniform_int_distribution <> dis_x(2,board.getWidth()-2);
+    std::uniform_int_distribution <> dis_y(2,board.getHeight()-2);
     int random_x = dis_x(gen);
     int random_y = dis_y(gen);
 

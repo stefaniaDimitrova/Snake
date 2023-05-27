@@ -1,4 +1,3 @@
-//the apple that the snake eats
 #pragma once
 #include "gameobject.hpp"
 
@@ -8,7 +7,9 @@ class Food : public GameObject
     unsigned count = 0;
 
     public:
+    Food();
     Food(char symbol, Board &board);
+    const unsigned getCount() const;
     virtual void onCollision(Board &board) override;
     virtual void update(Board &board);
 

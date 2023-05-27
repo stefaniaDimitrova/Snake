@@ -1,15 +1,20 @@
 #include "food.hpp"
 
+Food::Food()
+{
+    this->symbol = ' ';
+}
+
 Food::Food (char symbol, Board &board) : GameObject(symbol,board) 
 {
-    std::cout << "Food:" << std::endl;
-
     this->spawn(board);
     this->count ++;
     board.setCell(this->getPosition(),this->symbol);
+}
 
-    std::cout << this->getPosition().x << " " << this->getPosition().y << std::endl;
-
+const unsigned Food::getCount() const
+{
+    return this->count;
 }
 
 void Food::onCollision(Board &board)
@@ -24,9 +29,9 @@ void Food::onCollision(Board &board)
 void Food::update(Board &board)
 {
    this-> onCollision(board);
-    if (count < 1)
-    {
-        this->spawn(board);
-        count++;
-    }
+   if (this->count < 1)
+   {
+    this->spawn(board);
+    this->count++;
+   }
 }
