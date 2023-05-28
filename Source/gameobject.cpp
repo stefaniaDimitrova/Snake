@@ -1,4 +1,4 @@
-#include "gameobject.hpp"
+#include "../Headers/gameobject.hpp"
 
 GameObject::GameObject() : position(Point(1,1)), symbol(' ') {}
 

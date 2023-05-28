@@ -1,4 +1,4 @@
-#include"controls.hpp"
+#include"../Headers/controls.hpp"
 
 Control::Control() : up(' '), down(' '), left(' '), right(' ') {}
 

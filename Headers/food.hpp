@@ -9,7 +9,7 @@ class Food : public GameObject
     public:
     Food();
     Food(char symbol, Board &board);
-    const unsigned getCount() const;
+    // const unsigned getCount() const;
     virtual void onCollision(Board &board) override;
     virtual void update(Board &board);
 

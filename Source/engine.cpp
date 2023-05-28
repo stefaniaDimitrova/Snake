@@ -1,8 +1,8 @@
-#include "engine.hpp"
+#include "../Headers/engine.hpp"
 
 void Engine::start()
 {
-    int option = interface.DisplayMenu();
+    int option = menus.DisplayMenu();
 
     if(option == 1) 
     {
@@ -13,7 +13,7 @@ void Engine::start()
     else if (option == 2)
     {
         game.setPlayers(2);
-        int player = interface.playerSettings();
+        int player = menus.playerSettings();
         switch (player)
         {
         case 1:
@@ -25,12 +25,11 @@ void Engine::start()
         default:
             break;
         }
-        
     }
     
     else if (option == 3)
     {
-        int dificulty = interface.DisplayDifficultyMenu();
+        int dificulty = menus.DisplayDifficultyMenu();
         switch (dificulty)
         {
         case 1:
@@ -54,10 +53,7 @@ void Engine::start()
 
     else if (option == 5) 
     {
-        interface.DisplayHelp();
-
-        std::cout << "Press Enter to leave! \n";
-        std::cin.get();
+        menus.DisplayHelp();
         start();
     }
 

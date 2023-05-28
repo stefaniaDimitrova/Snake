@@ -1,4 +1,4 @@
-#include "food.hpp"
+#include "../Headers/food.hpp"
 
 Food::Food()
 {
@@ -12,10 +12,10 @@ Food::Food (char symbol, Board &board) : GameObject(symbol,board)
     board.setCell(this->getPosition(),this->symbol);
 }
 
-const unsigned Food::getCount() const
-{
-    return this->count;
-}
+// const unsigned Food::getCount() const
+// {
+//     return this->count;
+// }
 
 void Food::onCollision(Board &board)
 {

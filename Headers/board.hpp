@@ -3,8 +3,6 @@
 #include <vector>
 #include "point.hpp"
 
-//the play field
-
 class Board
 {
     private:

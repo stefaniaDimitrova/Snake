@@ -4,7 +4,7 @@
 class Engine
 {
     private:
-    UI interface;
+    UI menus;
     Game game;
 
     public:

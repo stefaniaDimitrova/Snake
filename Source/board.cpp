@@ -1,4 +1,4 @@
-#include "board.hpp"
+#include "../Headers/board.hpp"
 
 Board::Board() : width(0), height(0) {}
 

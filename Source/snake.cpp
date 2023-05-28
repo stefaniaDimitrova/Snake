@@ -1,4 +1,4 @@
-#include "snake.hpp"
+#include "../Headers/snake.hpp"
 #include <stdlib.h>
 #include <list>
 
@@ -45,11 +45,6 @@ void Snake::moveHead(GameObject &bodyPart)
     } 
 }
 
-bool Snake::getAte() const
-{
-    return this->ate;
-}
-
 int Snake::getSpeed() const
 {
     return this->speed;
@@ -58,11 +53,6 @@ int Snake::getSpeed() const
 void Snake::setSpeed(int speed)
 {
     this->speed = speed;
-}
-
-bool Snake::getHit()
-{
-    return this->hit;
 }
 
 Point Snake::getHead() const
@@ -337,7 +327,6 @@ bool Snake::checkCollision(GameObject head,Board &board)
 void Snake::onCollision(Board &board)
 {
     // this->render(board);
-    this->ate = false;
     this->collided = false;
     if (checkCollision(this->body.front(), board))
     {
@@ -368,7 +357,6 @@ void Snake::onCollision(Board &board)
             }
             break;
         case '+':
-            this->ate = true;
             this->body.push_back(GameObject(this->symbol,board));
             this->length++;
             break;

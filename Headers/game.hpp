@@ -1,4 +1,5 @@
 #pragma once
+#include <windows.h>
 #include "board.hpp"
 #include "snake.hpp"
 #include "food.hpp"
@@ -26,7 +27,5 @@ class Game
     void setPlayers(unsigned num);
     void setSpeed(int speed);
     void setAssisted(bool ass);
-    void goToNextLevel();
-    int generateRandomFood();
     void start();
 };

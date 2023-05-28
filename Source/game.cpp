@@ -1,6 +1,4 @@
-#include "game.hpp"
-#include <windows.h>
-#include <thread>
+#include "../Headers/game.hpp"
 
 Game::Game()
 {
@@ -54,16 +52,6 @@ void Game::setSpeed(int speed)
 void Game::setAssisted(bool ass)
 {
     this->assisted = ass;
-}
-
-int Game::generateRandomFood()
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution <> dis_x(1,2);
-    int random = dis_x(gen);
-    return random;
-    
 }
 
 void Game::start()
