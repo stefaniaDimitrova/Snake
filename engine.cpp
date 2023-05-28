@@ -20,7 +20,7 @@ void Engine::start()
             game.start();
             break;
         case 2:
-            game.getPlayers()[1].setAssisted(true);
+            game.setAssisted(true);
             game.start();
         default:
             break;
@@ -34,24 +34,15 @@ void Engine::start()
         switch (dificulty)
         {
         case 1:
-            for (size_t i = 0; i < game.getPlayers().size(); i++)
-            {
-                game.getPlayers()[i].setSpeed(1);
-            }
+            game.setSpeed(1);
             break;
 
         case 2:
-            for (size_t i = 0; i < game.getPlayers().size(); i++)
-            {
-                game.getPlayers()[i].setSpeed(2);
-            }
+            game.setSpeed(2);
             break;
 
         case 3:
-            for (size_t i = 0; i < game.getPlayers().size(); i++)
-            {
-                game.getPlayers()[i].setSpeed(3);
-            }
+            game.setSpeed(3);
             break;
         }
 

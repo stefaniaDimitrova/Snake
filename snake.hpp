@@ -28,6 +28,7 @@ class Snake : public GameObject
     void MoveBody(Point last);
     void setSpeed(int speed);
     bool getAte() const;
+    int getSpeed() const;
     bool getAssisted() const;
     void setObjective(Point obj);
     void setAssisted(bool a);
@@ -35,6 +36,7 @@ class Snake : public GameObject
     std::vector<Point> bfs(Board& board, Point start, Point food);
     bool getHit();
     void assistedMove(Board &board);
+    char determineInput(Direction dir);
     // void setDirection(Direction dir);
     // void setControls(Control ctrl);
     void changeDirection(char input);

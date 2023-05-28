@@ -14,6 +14,8 @@ class Game
     Food food;
     Poison poison;
     int counter = 0;
+    int speed;
+    bool assisted;
     std::vector<Snake> players;
     unsigned player = 2;
 
@@ -22,6 +24,8 @@ class Game
     std::vector <Snake> getPlayers() const;
     bool gameOver();
     void setPlayers(unsigned num);
+    void setSpeed(int speed);
+    void setAssisted(bool ass);
     void goToNextLevel();
     int generateRandomFood();
     void start();

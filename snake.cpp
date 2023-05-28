@@ -50,6 +50,11 @@ bool Snake::getAte() const
     return this->ate;
 }
 
+int Snake::getSpeed() const
+{
+    return this->speed;
+}
+
 void Snake::setSpeed(int speed)
 {
     this->speed = speed;
@@ -60,26 +65,39 @@ bool Snake::getHit()
     return this->hit;
 }
 
-void Snake::assistedMove(Board& board) 
+void Snake::assistedMove(Board& board)
 {
-    this->shortest_path = bfs(board, this->body.front().getPosition(), objective);  
+    this->shortest_path = bfs(board, this->body.front().getPosition(), objective);
 
-    if (!this->shortest_path.empty()) 
+    if (!this->shortest_path.empty())
     {
         Point nextPosition = this->shortest_path[this->position];
         Point currentHeadPosition = this->body.front().getPosition();
 
         if (nextPosition != currentHeadPosition)
         {
-            // Determine the direction to move based on the difference between the current head position and the next position
-            if (nextPosition.y < currentHeadPosition.y && currentDirection != Direction::DOWN)
-                this->changeDirection(this->ctrl.getUp());
-            else if (nextPosition.y > currentHeadPosition.y && currentDirection != Direction::UP)
-                this->changeDirection(this->ctrl.getDown());
-            else if (nextPosition.x < currentHeadPosition.x && currentDirection != Direction::RIGHT)
-                this->changeDirection(this->ctrl.getLeft());
-            else if (nextPosition.x > currentHeadPosition.x && currentDirection != Direction::LEFT)
-                this->changeDirection(this->ctrl.getRight());
+            // Determine the x and y differences between the positions
+            int xDiff = nextPosition.x - currentHeadPosition.x;
+            int yDiff = nextPosition.y - currentHeadPosition.y;
+
+            // Determine the intended direction based on the differences
+            Direction intendedDirection;
+            if (yDiff < 0 && currentDirection != Direction::DOWN)
+                intendedDirection = Direction::UP;
+            else if (yDiff > 0 && currentDirection != Direction::UP)
+                intendedDirection = Direction::DOWN;
+            else if (xDiff < 0 && currentDirection != Direction::RIGHT)
+                intendedDirection = Direction::LEFT;
+            else if (xDiff > 0 && currentDirection != Direction::LEFT)
+                intendedDirection = Direction::RIGHT;
+
+            // Change the direction if it's different from the current direction
+            if (intendedDirection != currentDirection)
+            {
+            // this->getNextPosition(currentHeadPosition,intendedDirection);
+            this->changeDirection(determineInput(intendedDirection));
+            this->currentDirection = intendedDirection;
+            }
         }
 
         this->body.front().setPosition(nextPosition);
@@ -89,20 +107,34 @@ void Snake::assistedMove(Board& board)
             this->position = 0;
     }
 
-    // Check if there are no valid moves available
-    if (this->shortest_path.empty() || this->position >= this->shortest_path.size()) 
-    {
-        // Add logic to handle when there are no valid moves, e.g., choose a different objective or change the behavior of the assisted player.
-        // For example, you can randomly choose a new objective or stop the snake's movement.
-        // Alternatively, you can modify the bfs algorithm to handle cases where there are no valid moves.
-        return; // Skip the collision check and body movement if there are no valid moves
-    }
-    
     Point head = this->body.front().getPosition();
     this->onCollision(board);
     this->MoveBody(head);
 }
 
+char Snake::determineInput(Direction dir)
+{
+    switch (dir)
+    {
+    case Direction::UP:
+        return this->ctrl.getUp();
+        break;
+    case Direction::DOWN:
+        return this->ctrl.getDown();
+        break;
+    case Direction::LEFT:
+        return this->ctrl.getLeft();
+        break;
+    case Direction::RIGHT:
+        return this->ctrl.getRight();
+        break;
+    
+    default:
+        break;
+    }
+
+    return ' ';
+}
 
 
 void Snake::MoveBody(Point head)

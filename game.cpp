@@ -40,6 +40,16 @@ void Game::setPlayers(unsigned num)
     this->player = num;
 }
 
+void Game::setSpeed(int speed)
+{
+    this->speed = speed;
+}
+
+void Game::setAssisted(bool ass)
+{
+    this->assisted = ass;
+}
+
 int Game::generateRandomFood()
 {
     std::random_device rd;
@@ -52,6 +62,13 @@ int Game::generateRandomFood()
 
 void Game::start()
 {
+    for (size_t i = 0; i < player; i++)
+    {
+        players[i].setSpeed(this->speed);
+    }
+    
+    this->players[1].setAssisted(this->assisted);
+
     char input;
     input = _getch();
     while (!gameOver() && input != 'q')
@@ -61,29 +78,29 @@ void Game::start()
             this->food.render(this->board);
             this->poison.render(this->board);
 
-           if (this->player == 2)
-            {
-                if (this->players[1].getAssisted() == true)
+            if (this->player == 2)
                 {
-                    
-                    this->players[0].update(input, board);
-                    this->players[0].render(this->board);
-                    this->players[1].assistedMove(this->board);
-                    this->players[1].render(this->board);
+                    if (this->players[1].getAssisted() == true)
+                    {
+                        
+                        this->players[0].update(input, board);
+                        this->players[0].render(this->board);
+                        this->players[1].assistedMove(this->board);
+                        this->players[1].render(this->board);
+                    }
+                    else if(this->players[1].getAssisted() == false)
+                    { 
+                        this->players[0].update(input, board);
+                        this->players[0].render(board);
+                        this->players[1].update(input,board);
+                        this->players[1].render(board);
+                    }
                 }
-                else if(this->players[1].getAssisted() == false)
-                { 
+                else if (this->player == 1)
+                {
                     this->players[0].update(input, board);
                     this->players[0].render(board);
-                    this->players[1].update(input,board);
-                    this->players[1].render(board);
-                }
-            }
-            else if (this->player == 1)
-            {
-                this->players[0].update(input, board);
-                this->players[0].render(board);
-            }
+                }          
         
             this->food.update(this->board);
             this->poison.update(this->board);
