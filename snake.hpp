@@ -30,6 +30,7 @@ class Snake : public GameObject
     bool getAte() const;
     int getSpeed() const;
     bool getAssisted() const;
+    Point getHead() const;
     void setObjective(Point obj);
     void setAssisted(bool a);
     bool isValidPosition(Point position, Board &board);

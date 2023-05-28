@@ -27,11 +27,17 @@ std::vector<Snake> Game::getPlayers() const
 
 bool Game::gameOver()
 {
+    Point pl1 = this->players[0].getHead();
+    Point pl2 = this->players[1].getHead();
     for (size_t i = 0; i < this->player; i++)
     {
         if (this->players[i].getLength() <= 0) return true;
-        if (this->players[i].getHit() == true) return true;
     }
+    if (pl1 == pl2)
+    {
+        return true;
+    }
+    
      return false;
 }
 
@@ -81,7 +87,8 @@ void Game::start()
             if (this->player == 2)
                 {
                     if (this->players[1].getAssisted() == true)
-                    {
+                    {   
+                            this->players[1].setObjective(this->food.getPosition());
                         
                         this->players[0].update(input, board);
                         this->players[0].render(this->board);
@@ -107,7 +114,7 @@ void Game::start()
             this->board.render();
             this->board.clear();
         }
-        input = _getch();
+        if (!gameOver()) input = _getch();
 
         if(input == 'p')
         {

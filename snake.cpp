@@ -65,15 +65,22 @@ bool Snake::getHit()
     return this->hit;
 }
 
+Point Snake::getHead() const
+{
+    return this->body.front().getPosition();
+}
+
 void Snake::assistedMove(Board& board)
 {
-    this->shortest_path = bfs(board, this->body.front().getPosition(), objective);
-
+    std::vector<Point> shortest_path = bfs(board, this->body.front().getPosition(), objective);
+    this->shortest_path = shortest_path;
+    
     if (!this->shortest_path.empty())
     {
-        Point nextPosition = this->shortest_path[this->position];
+        Point nextPosition = this->shortest_path[1];
         Point currentHeadPosition = this->body.front().getPosition();
 
+        Direction intendedDirection = this->currentDirection;
         if (nextPosition != currentHeadPosition)
         {
             // Determine the x and y differences between the positions
@@ -81,7 +88,6 @@ void Snake::assistedMove(Board& board)
             int yDiff = nextPosition.y - currentHeadPosition.y;
 
             // Determine the intended direction based on the differences
-            Direction intendedDirection;
             if (yDiff < 0 && currentDirection != Direction::DOWN)
                 intendedDirection = Direction::UP;
             else if (yDiff > 0 && currentDirection != Direction::UP)
@@ -101,7 +107,7 @@ void Snake::assistedMove(Board& board)
         }
 
         this->body.front().setPosition(nextPosition);
-        this->position++;
+        // std::cout << "Position: " << this->position << std::endl;
 
         if (this->position >= this->shortest_path.size())
             this->position = 0;
