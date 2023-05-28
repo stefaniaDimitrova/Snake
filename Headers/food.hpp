@@ -20,6 +20,12 @@ class Food : public GameObject
     /*! Method that sets the object's behaviour when it collides with another one */
     virtual void onCollision(Board &board) override;
 
+    /*! Getter for count */
+    const unsigned getCount() const;
+
+    /*! Setter for count */
+    void setCount(unsigned count);
+
     /*! Method that updates the current state of the object and makes any neccessary changes */
     virtual void update(Board &board);
 

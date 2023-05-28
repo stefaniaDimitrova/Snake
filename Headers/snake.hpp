@@ -59,6 +59,9 @@ class Snake : public GameObject
     /*! Setter for the speed */
     void setSpeed(int speed);
 
+    /*! Setter for length */
+    void setLength(int length);
+
     /*! Setter for the objective */
     void setObjective(Point obj);
 

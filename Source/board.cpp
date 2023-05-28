@@ -21,7 +21,6 @@ bool Board::notBorder(Point position)
         return false;
     }
     return true;
-    
 }
 
 void Board::setWidth(int a)

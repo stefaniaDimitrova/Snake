@@ -25,6 +25,11 @@ const int Snake::getLength() const
     return this->length;
 }
 
+void Snake::setLength(int length)
+{
+    this->length = length;
+}
+
 void Snake::moveHead(GameObject &bodyPart)
 {  
     if (this->currentDirection == Direction::DOWN)
@@ -73,7 +78,6 @@ void Snake::assistedMove(Board& board)
         Direction intendedDirection = this->currentDirection;
         if (nextPosition != currentHeadPosition)
         {
-            // Determine the x and y differences between the positions
             int xDiff = nextPosition.x - currentHeadPosition.x;
             int yDiff = nextPosition.y - currentHeadPosition.y;
 
@@ -90,14 +94,12 @@ void Snake::assistedMove(Board& board)
             // Change the direction if it's different from the current direction
             if (intendedDirection != currentDirection)
             {
-            // this->getNextPosition(currentHeadPosition,intendedDirection);
             this->changeDirection(determineInput(intendedDirection));
             this->currentDirection = intendedDirection;
             }
         }
 
         this->body.front().setPosition(nextPosition);
-        // std::cout << "Position: " << this->position << std::endl;
 
         if (this->position >= this->shortest_path.size())
             this->position = 0;
