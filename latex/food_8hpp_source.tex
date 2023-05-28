@@ -1,0 +1,25 @@
+\doxysection{food.\+hpp}
+\hypertarget{food_8hpp_source}{}\label{food_8hpp_source}\index{Headers/food.hpp@{Headers/food.hpp}}
+\mbox{\hyperlink{food_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gameobject_8hpp}{gameobject.hpp}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_food}{Food}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ protected\ :}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_food_ae3673d2daaa9fd35e03bada4598b6de5}{count}}\ =\ 0;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_food_a75d4d7f76fd495cc8133302ca9fdc485}{Food}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_food_a75d4d7f76fd495cc8133302ca9fdc485}{Food}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}},\ \mbox{\hyperlink{class_board}{Board}}\ \&board);}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_a2b2db5e119cd110a7439f8cdf5468c8f}{onCollision}}(\mbox{\hyperlink{class_board}{Board}}\ \&board)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_food_a0395f7bde80fff296eec8debed7f383e}{update}}(\mbox{\hyperlink{class_board}{Board}}\ \&board);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_food_ae2a4e53388ef5377a6eb366dcdde3dd7}{\string~Food}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

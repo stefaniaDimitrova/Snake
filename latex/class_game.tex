@@ -1,0 +1,142 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_snake}{Snake}} $>$ \mbox{\hyperlink{class_game_a163862c2d4c025a55c7f9e045142e8e2}{get\+Players}} () const
+\item 
+bool \mbox{\hyperlink{class_game_afab75d8e6aff14f69306c22107dc0130}{game\+Over}} ()
+\item 
+void \mbox{\hyperlink{class_game_a2acf59fcf26909ad0ec1c2f19e624145}{set\+Players}} (unsigned num)
+\item 
+void \mbox{\hyperlink{class_game_adb9239fdd7f7d67e4b28a22c274eb05e}{set\+Speed}} (int \mbox{\hyperlink{class_game_a02a58acc040d6d014e02832453695ef5}{speed}})
+\item 
+void \mbox{\hyperlink{class_game_a2b84ad635218ae92836ccc5032e4483c}{set\+Assisted}} (bool ass)
+\item 
+void \mbox{\hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}}
+\item 
+\mbox{\hyperlink{class_food}{Food}} \mbox{\hyperlink{class_game_a12a847a586e6b3e03d259198fbbca539}{food}}
+\item 
+\mbox{\hyperlink{class_poison}{Poison}} \mbox{\hyperlink{class_game_a1e844b9573574d9b77dd9b084c5fc3d2}{poison}}
+\item 
+int \mbox{\hyperlink{class_game_a02a58acc040d6d014e02832453695ef5}{speed}}
+\item 
+bool \mbox{\hyperlink{class_game_a999bed4a4d5fa27e7e720fcfa6cf91bb}{assisted}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_snake}{Snake}} $>$ \mbox{\hyperlink{class_game_a492377d2a510804e4e4bcb48a0343c1c}{players}}
+\item 
+unsigned \mbox{\hyperlink{class_game_ad5166bb7e2039f44001f0bf26f08a293}{player}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_game}{Game} which holds all the necessary objects fro the game 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default coustructor which creates all the objects that we need in the game and sets their default values 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_afab75d8e6aff14f69306c22107dc0130}\label{class_game_afab75d8e6aff14f69306c22107dc0130} 
+\index{Game@{Game}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gameOver()}{gameOver()}}
+{\footnotesize\ttfamily bool Game\+::game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the game has ended \Hypertarget{class_game_a163862c2d4c025a55c7f9e045142e8e2}\label{class_game_a163862c2d4c025a55c7f9e045142e8e2} 
+\index{Game@{Game}!getPlayers@{getPlayers}}
+\index{getPlayers@{getPlayers}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getPlayers()}{getPlayers()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_snake}{Snake}} $>$ Game\+::get\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the players \Hypertarget{class_game_a2b84ad635218ae92836ccc5032e4483c}\label{class_game_a2b84ad635218ae92836ccc5032e4483c} 
+\index{Game@{Game}!setAssisted@{setAssisted}}
+\index{setAssisted@{setAssisted}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setAssisted()}{setAssisted()}}
+{\footnotesize\ttfamily void Game\+::set\+Assisted (\begin{DoxyParamCaption}\item[{bool}]{ass }\end{DoxyParamCaption})}
+
+Sets the assistance \Hypertarget{class_game_a2acf59fcf26909ad0ec1c2f19e624145}\label{class_game_a2acf59fcf26909ad0ec1c2f19e624145} 
+\index{Game@{Game}!setPlayers@{setPlayers}}
+\index{setPlayers@{setPlayers}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setPlayers()}{setPlayers()}}
+{\footnotesize\ttfamily void Game\+::set\+Players (\begin{DoxyParamCaption}\item[{unsigned}]{num }\end{DoxyParamCaption})}
+
+Sets how many players will play \Hypertarget{class_game_adb9239fdd7f7d67e4b28a22c274eb05e}\label{class_game_adb9239fdd7f7d67e4b28a22c274eb05e} 
+\index{Game@{Game}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void Game\+::set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+Sets the speed of the players \Hypertarget{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}\label{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90} 
+\index{Game@{Game}!start@{start}}
+\index{start@{start}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Game\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to start the game 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_a999bed4a4d5fa27e7e720fcfa6cf91bb}\label{class_game_a999bed4a4d5fa27e7e720fcfa6cf91bb} 
+\index{Game@{Game}!assisted@{assisted}}
+\index{assisted@{assisted}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{assisted}{assisted}}
+{\footnotesize\ttfamily bool Game\+::assisted\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_af5bc546b0c766ecf2f7e008f750832ed}\label{class_game_af5bc546b0c766ecf2f7e008f750832ed} 
+\index{Game@{Game}!board@{board}}
+\index{board@{board}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Game\+::board\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variables for the game\+: board -\/ gives us a board food -\/ gives us food object poison -\/ a poison object speed -\/ it is used when we want to change the difficulty of the game, it keeps track of the current speed. By defaults, it is set to easy(1) assisted -\/ tells us whether the computer will be managing one of the players players -\/ vector of \doxylink{class_snake}{Snake} objects where we will store our players player -\/ the number of players that will participate in the game, by default it is 2 \Hypertarget{class_game_a12a847a586e6b3e03d259198fbbca539}\label{class_game_a12a847a586e6b3e03d259198fbbca539} 
+\index{Game@{Game}!food@{food}}
+\index{food@{food}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{food}{food}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_food}{Food}} Game\+::food\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_ad5166bb7e2039f44001f0bf26f08a293}\label{class_game_ad5166bb7e2039f44001f0bf26f08a293} 
+\index{Game@{Game}!player@{player}}
+\index{player@{player}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily unsigned Game\+::player = 2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_a492377d2a510804e4e4bcb48a0343c1c}\label{class_game_a492377d2a510804e4e4bcb48a0343c1c} 
+\index{Game@{Game}!players@{players}}
+\index{players@{players}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{players}{players}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_snake}{Snake}}$>$ Game\+::players\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_a1e844b9573574d9b77dd9b084c5fc3d2}\label{class_game_a1e844b9573574d9b77dd9b084c5fc3d2} 
+\index{Game@{Game}!poison@{poison}}
+\index{poison@{poison}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{poison}{poison}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_poison}{Poison}} Game\+::poison\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_game_a02a58acc040d6d014e02832453695ef5}\label{class_game_a02a58acc040d6d014e02832453695ef5} 
+\index{Game@{Game}!speed@{speed}}
+\index{speed@{speed}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int Game\+::speed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{game_8hpp}{game.\+hpp}}\item 
+Source/\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}

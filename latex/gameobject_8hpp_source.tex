@@ -1,0 +1,40 @@
+\doxysection{gameobject.\+hpp}
+\hypertarget{gameobject_8hpp_source}{}\label{gameobject_8hpp_source}\index{Headers/gameobject.hpp@{Headers/gameobject.hpp}}
+\mbox{\hyperlink{gameobject_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{iupdateable_8hpp}{iupdateable.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{point_8hpp}{point.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{board_8hpp}{board.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{controls_8hpp}{controls.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}conio.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_spawner}{ISpawner}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_point}{Point}}\ \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}},\ \mbox{\hyperlink{class_board}{Board}}\ \&board);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_point}{Point}}\ \mbox{\hyperlink{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_object_ab80f990104593c8eb0e3f2169e211f09}{getSymbol}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_aeff56b8c1659f65946a424b9c7d90c78}{setPosition}}(\mbox{\hyperlink{class_point}{Point}}\ \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_ae0e1b9518de68be9c5da847139727792}{setSymbol}}(\textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944}{spawn}}(\mbox{\hyperlink{class_board}{Board}}\ \&board)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a35423918474738484ed76608458adf6d}{render}}(\mbox{\hyperlink{class_board}{Board}}\ \&other);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{onCollision}}(\mbox{\hyperlink{class_board}{Board}}\ \&board);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

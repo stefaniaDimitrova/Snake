@@ -1,6 +1,6 @@
 #pragma once
 #include "board.hpp"
-
+/*! Interface that holds the spawn function */
 class ISpawner
 {
     public:

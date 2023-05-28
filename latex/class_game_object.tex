@@ -1,0 +1,140 @@
+\doxysection{Game\+Object Class Reference}
+\hypertarget{class_game_object}{}\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+{\ttfamily \#include $<$gameobject.\+hpp$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_game_object_a43a13cd2a8fd47d51eed390c8fec455d}{Game\+Object}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6}{get\+Position}} () const
+\item 
+char \mbox{\hyperlink{class_game_object_ab80f990104593c8eb0e3f2169e211f09}{get\+Symbol}} () const
+\item 
+void \mbox{\hyperlink{class_game_object_aeff56b8c1659f65946a424b9c7d90c78}{set\+Position}} (\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}})
+\item 
+void \mbox{\hyperlink{class_game_object_ae0e1b9518de68be9c5da847139727792}{set\+Symbol}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}})
+\item 
+virtual void \mbox{\hyperlink{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a35423918474738484ed76608458adf6d}{render}} (\mbox{\hyperlink{class_board}{Board}} \&other)
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{on\+Collision}} (\mbox{\hyperlink{class_board}{Board}} \&board)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_spawner_a7c966e162e0be343408d65678132bc17}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}}
+\item 
+char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_game_object}{Game\+Object} that stores all the objects in the game 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \Hypertarget{class_game_object_a43a13cd2a8fd47d51eed390c8fec455d}\label{class_game_object_a43a13cd2a8fd47d51eed390c8fec455d} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{char}]{symbol,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})}
+
+Parametric consructor puting a specific symbol at a certain position 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6}\label{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6} 
+\index{GameObject@{GameObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Game\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the position \Hypertarget{class_game_object_ab80f990104593c8eb0e3f2169e211f09}\label{class_game_object_ab80f990104593c8eb0e3f2169e211f09} 
+\index{GameObject@{GameObject}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily char Game\+Object\+::get\+Symbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the symbol \Hypertarget{class_game_object_a7b91f7f59ab606926948e41b8709d65b}\label{class_game_object_a7b91f7f59ab606926948e41b8709d65b} 
+\index{GameObject@{GameObject}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily void Game\+Object\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Default behaviour on collision 
+
+Reimplemented in \mbox{\hyperlink{class_food_a2b2db5e119cd110a7439f8cdf5468c8f}{Food}}, \mbox{\hyperlink{class_poison_a0dbe011f84e121bbc1c0120bd90e9c95}{Poison}}, and \mbox{\hyperlink{class_snake_a40c9f48d752228c0b901c4eaa4f33abb}{Snake}}.
+
+\Hypertarget{class_game_object_a35423918474738484ed76608458adf6d}\label{class_game_object_a35423918474738484ed76608458adf6d} 
+\index{GameObject@{GameObject}!render@{render}}
+\index{render@{render}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Game\+Object\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Puts the symbol on the board 
+
+Reimplemented in \mbox{\hyperlink{class_snake_ac443711d4119df857a58be6e63a75a94}{Snake}}.
+
+\Hypertarget{class_game_object_aeff56b8c1659f65946a424b9c7d90c78}\label{class_game_object_aeff56b8c1659f65946a424b9c7d90c78} 
+\index{GameObject@{GameObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position }\end{DoxyParamCaption})}
+
+Setter for the position \Hypertarget{class_game_object_ae0e1b9518de68be9c5da847139727792}\label{class_game_object_ae0e1b9518de68be9c5da847139727792} 
+\index{GameObject@{GameObject}!setSymbol@{setSymbol}}
+\index{setSymbol@{setSymbol}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setSymbol()}{setSymbol()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Symbol (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Setter for the symbol \Hypertarget{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944}\label{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944} 
+\index{GameObject@{GameObject}!spawn@{spawn}}
+\index{spawn@{spawn}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void Game\+Object\+::spawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Spawns a game object at a random position on the board !\+The code for the spawn is not an original implementation! !\+This is used code! 
+
+Implements \mbox{\hyperlink{class_i_spawner_a7c966e162e0be343408d65678132bc17}{ISpawner}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}\label{class_game_object_a85dcfba7d42ed092599489a475b9b5a1} 
+\index{GameObject@{GameObject}!position@{position}}
+\index{position@{position}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Game\+Object\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+it has a position and a symbol \Hypertarget{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}\label{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3} 
+\index{GameObject@{GameObject}!symbol@{symbol}}
+\index{symbol@{symbol}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily char Game\+Object\+::symbol\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{gameobject_8hpp}{gameobject.\+hpp}}\item 
+Source/\mbox{\hyperlink{gameobject_8cpp}{gameobject.\+cpp}}\end{DoxyCompactItemize}

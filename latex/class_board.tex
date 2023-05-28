@@ -1,0 +1,159 @@
+\doxysection{Board Class Reference}
+\hypertarget{class_board}{}\label{class_board}\index{Board@{Board}}
+
+
+{\ttfamily \#include $<$board.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\item 
+void \mbox{\hyperlink{class_board_af74f0d4b43e5aa3faea16d7c6407b05e}{clear}} ()
+\item 
+bool \mbox{\hyperlink{class_board_a8359d2ab9919aea4fe3caa7991ba8fb4}{not\+Border}} (\mbox{\hyperlink{class_point}{Point}} position)
+\item 
+void \mbox{\hyperlink{class_board_a11306addbdcb6f710d19d78de3f1bff2}{set\+Width}} (int a)
+\item 
+void \mbox{\hyperlink{class_board_a546dd77334e251ac1c307a9c06699e91}{set\+Height}} (int a)
+\item 
+void \mbox{\hyperlink{class_board_a3d1c8f17d1840f319641bb8fe1fb6d62}{set\+Cell}} (\mbox{\hyperlink{class_point}{Point}} position, char symbol)
+\item 
+char \mbox{\hyperlink{class_board_abc7242ca946f55900d2eb12529b22779}{get\+Cell}} (\mbox{\hyperlink{class_point}{Point}} position) const
+\item 
+int \mbox{\hyperlink{class_board_a31bdad2985e3b4857a383dd2da8e8e27}{get\+Width}} () const
+\item 
+int \mbox{\hyperlink{class_board_a888725ae3b1177a60a8f77299c1c939a}{get\+Height}} () const
+\item 
+void \mbox{\hyperlink{class_board_a56a874d86b1fa1068d6f29b3af559bcd}{generate\+Grid}} ()
+\item 
+void \mbox{\hyperlink{class_board_a6ca77471cf4df32ec4ea1da795065327}{render}} ()
+\item 
+virtual \mbox{\hyperlink{class_board_a1bceb44e5a334606a576482c8af0d3f8}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_board}{Board} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor for board, setting the height and width to 0 \Hypertarget{class_board_a1bceb44e5a334606a576482c8af0d3f8}\label{class_board_a1bceb44e5a334606a576482c8af0d3f8} 
+\index{Board@{Board}!````~Board@{\texorpdfstring{$\sim$}{\string~}Board}}
+\index{````~Board@{\texorpdfstring{$\sim$}{\string~}Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Board()}{\string~Board()}}
+{\footnotesize\ttfamily virtual Board\+::\texorpdfstring{$\sim$}{\string~}\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default constructor because there is no dynamic memory 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_board_af74f0d4b43e5aa3faea16d7c6407b05e}\label{class_board_af74f0d4b43e5aa3faea16d7c6407b05e} 
+\index{Board@{Board}!clear@{clear}}
+\index{clear@{clear}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Board\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Method to make all the fields in the board empty again (\textquotesingle{} \textquotesingle{}) \Hypertarget{class_board_a56a874d86b1fa1068d6f29b3af559bcd}\label{class_board_a56a874d86b1fa1068d6f29b3af559bcd} 
+\index{Board@{Board}!generateGrid@{generateGrid}}
+\index{generateGrid@{generateGrid}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{generateGrid()}{generateGrid()}}
+{\footnotesize\ttfamily void Board\+::generate\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Generates a board with heigth rows and width columns ans puts border symbols in the edges\+: \texorpdfstring{$\vert$}{|} -\/ left and right border \+\_\+ -\/ upper border
+\begin{DoxyItemize}
+\item -\/ lower border 
+\end{DoxyItemize}\Hypertarget{class_board_abc7242ca946f55900d2eb12529b22779}\label{class_board_abc7242ca946f55900d2eb12529b22779} 
+\index{Board@{Board}!getCell@{getCell}}
+\index{getCell@{getCell}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getCell()}{getCell()}}
+{\footnotesize\ttfamily char Board\+::get\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the symbol that is in a certain position 
+\end{DoxyReturn}
+\Hypertarget{class_board_a888725ae3b1177a60a8f77299c1c939a}\label{class_board_a888725ae3b1177a60a8f77299c1c939a} 
+\index{Board@{Board}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Board\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the height of the board 
+\end{DoxyReturn}
+\Hypertarget{class_board_a31bdad2985e3b4857a383dd2da8e8e27}\label{class_board_a31bdad2985e3b4857a383dd2da8e8e27} 
+\index{Board@{Board}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Board\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the width of the board 
+\end{DoxyReturn}
+\Hypertarget{class_board_a8359d2ab9919aea4fe3caa7991ba8fb4}\label{class_board_a8359d2ab9919aea4fe3caa7991ba8fb4} 
+\index{Board@{Board}!notBorder@{notBorder}}
+\index{notBorder@{notBorder}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{notBorder()}{notBorder()}}
+{\footnotesize\ttfamily bool Board\+::not\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position }\end{DoxyParamCaption})}
+
+Checking if a certain position leaves the bounds of the board \begin{DoxyReturn}{Returns}
+true if the point is on the border or outside of it 
+
+false if the point is inside the borders 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & gives us the position that we are going to check \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a6ca77471cf4df32ec4ea1da795065327}\label{class_board_a6ca77471cf4df32ec4ea1da795065327} 
+\index{Board@{Board}!render@{render}}
+\index{render@{render}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Board\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints the board in the terminal \Hypertarget{class_board_a3d1c8f17d1840f319641bb8fe1fb6d62}\label{class_board_a3d1c8f17d1840f319641bb8fe1fb6d62} 
+\index{Board@{Board}!setCell@{setCell}}
+\index{setCell@{setCell}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setCell()}{setCell()}}
+{\footnotesize\ttfamily void Board\+::set\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position,  }\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+Puts a specific symbol on the board 
+\begin{DoxyParams}{Parameters}
+{\em position} & tells us where the symbol will be put \\
+\hline
+{\em symbol} & tells us what the symbol is going to be \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a546dd77334e251ac1c307a9c06699e91}\label{class_board_a546dd77334e251ac1c307a9c06699e91} 
+\index{Board@{Board}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily void Board\+::set\+Height (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+Sets the height to a certain value 
+\begin{DoxyParams}{Parameters}
+{\em a} & is the width that the board is going to have \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_board_a11306addbdcb6f710d19d78de3f1bff2}\label{class_board_a11306addbdcb6f710d19d78de3f1bff2} 
+\index{Board@{Board}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void Board\+::set\+Width (\begin{DoxyParamCaption}\item[{int}]{a }\end{DoxyParamCaption})}
+
+Sets the width to a certain value 
+\begin{DoxyParams}{Parameters}
+{\em a} & is the width that the board is going to have \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{board_8hpp}{board.\+hpp}}\item 
+Source/\mbox{\hyperlink{board_8cpp}{board.\+cpp}}\end{DoxyCompactItemize}

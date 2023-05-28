@@ -1,0 +1,131 @@
+\doxysection{Food Class Reference}
+\hypertarget{class_food}{}\label{class_food}\index{Food@{Food}}
+
+
+{\ttfamily \#include $<$food.\+hpp$>$}
+
+Inheritance diagram for Food\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_food}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_food_a75d4d7f76fd495cc8133302ca9fdc485}{Food}} ()
+\item 
+\mbox{\hyperlink{class_food_a709c131fabf2413eab74694662a7517c}{Food}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+virtual void \mbox{\hyperlink{class_food_a2b2db5e119cd110a7439f8cdf5468c8f}{on\+Collision}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual void \mbox{\hyperlink{class_food_a0395f7bde80fff296eec8debed7f383e}{update}} (\mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+virtual \mbox{\hyperlink{class_food_ae2a4e53388ef5377a6eb366dcdde3dd7}{\texorpdfstring{$\sim$}{\string~}\+Food}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_game_object_a43a13cd2a8fd47d51eed390c8fec455d}{Game\+Object}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6}{get\+Position}} () const
+\item 
+char \mbox{\hyperlink{class_game_object_ab80f990104593c8eb0e3f2169e211f09}{get\+Symbol}} () const
+\item 
+void \mbox{\hyperlink{class_game_object_aeff56b8c1659f65946a424b9c7d90c78}{set\+Position}} (\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}})
+\item 
+void \mbox{\hyperlink{class_game_object_ae0e1b9518de68be9c5da847139727792}{set\+Symbol}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}})
+\item 
+virtual void \mbox{\hyperlink{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a35423918474738484ed76608458adf6d}{render}} (\mbox{\hyperlink{class_board}{Board}} \&other)
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{on\+Collision}} (\mbox{\hyperlink{class_board}{Board}} \&board)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_spawner_a7c966e162e0be343408d65678132bc17}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_food_ae3673d2daaa9fd35e03bada4598b6de5}{count}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}}
+\item 
+char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class food which is inheritant of \doxylink{class_game_object}{Game\+Object} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_food_a75d4d7f76fd495cc8133302ca9fdc485}\label{class_food_a75d4d7f76fd495cc8133302ca9fdc485} 
+\index{Food@{Food}!Food@{Food}}
+\index{Food@{Food}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{Food()}{Food()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Food\+::\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor which sets the symbol to \textquotesingle{} \textquotesingle{} \Hypertarget{class_food_a709c131fabf2413eab74694662a7517c}\label{class_food_a709c131fabf2413eab74694662a7517c} 
+\index{Food@{Food}!Food@{Food}}
+\index{Food@{Food}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{Food()}{Food()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Food\+::\+Food (\begin{DoxyParamCaption}\item[{char}]{symbol,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})}
+
+Parametric constructor that puts a symbol on the board 
+\begin{DoxyParams}{Parameters}
+{\em symbol} & tells us what char will be put on the board \\
+\hline
+{\em board} & gives us the sizes of the field we have \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_food_ae2a4e53388ef5377a6eb366dcdde3dd7}\label{class_food_ae2a4e53388ef5377a6eb366dcdde3dd7} 
+\index{Food@{Food}!````~Food@{\texorpdfstring{$\sim$}{\string~}Food}}
+\index{````~Food@{\texorpdfstring{$\sim$}{\string~}Food}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Food()}{\string~Food()}}
+{\footnotesize\ttfamily virtual Food\+::\texorpdfstring{$\sim$}{\string~}\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual dectructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_food_a2b2db5e119cd110a7439f8cdf5468c8f}\label{class_food_a2b2db5e119cd110a7439f8cdf5468c8f} 
+\index{Food@{Food}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily void Food\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method that sets the object\textquotesingle{}s behaviour when it collides with another one 
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{Game\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_poison_a0dbe011f84e121bbc1c0120bd90e9c95}{Poison}}.
+
+\Hypertarget{class_food_a0395f7bde80fff296eec8debed7f383e}\label{class_food_a0395f7bde80fff296eec8debed7f383e} 
+\index{Food@{Food}!update@{update}}
+\index{update@{update}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Food\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method that updates the current state of the object and makes any neccessary changes 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_food_ae3673d2daaa9fd35e03bada4598b6de5}\label{class_food_ae3673d2daaa9fd35e03bada4598b6de5} 
+\index{Food@{Food}!count@{count}}
+\index{count@{count}!Food@{Food}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily unsigned Food\+::count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+Count keeps track of how any objects of this type are currently on the board 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{food_8hpp}{food.\+hpp}}\item 
+Source/\mbox{\hyperlink{food_8cpp}{food.\+cpp}}\end{DoxyCompactItemize}

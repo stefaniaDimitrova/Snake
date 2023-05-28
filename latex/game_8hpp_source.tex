@@ -1,0 +1,41 @@
+\doxysection{game.\+hpp}
+\hypertarget{game_8hpp_source}{}\label{game_8hpp_source}\index{Headers/game.hpp@{Headers/game.hpp}}
+\mbox{\hyperlink{game_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{board_8hpp}{board.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{snake_8hpp}{snake.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{food_8hpp}{food.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{poison_8hpp}{poison.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ui_8hpp}{ui.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gameobject_8hpp}{gameobject.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_board}{Board}}\ \mbox{\hyperlink{class_game_af5bc546b0c766ecf2f7e008f750832ed}{board}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_food}{Food}}\ \mbox{\hyperlink{class_game_a12a847a586e6b3e03d259198fbbca539}{food}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_poison}{Poison}}\ \mbox{\hyperlink{class_game_a1e844b9573574d9b77dd9b084c5fc3d2}{poison}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a02a58acc040d6d014e02832453695ef5}{speed}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a999bed4a4d5fa27e7e720fcfa6cf91bb}{assisted}};}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<Snake>\ \mbox{\hyperlink{class_game_a492377d2a510804e4e4bcb48a0343c1c}{players}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_game_ad5166bb7e2039f44001f0bf26f08a293}{player}}\ =\ 2;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::vector\ <Snake>\ \mbox{\hyperlink{class_game_a163862c2d4c025a55c7f9e045142e8e2}{getPlayers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_afab75d8e6aff14f69306c22107dc0130}{gameOver}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a2acf59fcf26909ad0ec1c2f19e624145}{setPlayers}}(\textcolor{keywordtype}{unsigned}\ num);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_adb9239fdd7f7d67e4b28a22c274eb05e}{setSpeed}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a02a58acc040d6d014e02832453695ef5}{speed}});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a2b84ad635218ae92836ccc5032e4483c}{setAssisted}}(\textcolor{keywordtype}{bool}\ ass);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a3d9b98f7c4a96ecf578f75b96c9f0e90}{start}}();}
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

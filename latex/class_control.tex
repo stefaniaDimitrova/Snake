@@ -1,0 +1,91 @@
+\doxysection{Control Class Reference}
+\hypertarget{class_control}{}\label{class_control}\index{Control@{Control}}
+
+
+{\ttfamily \#include $<$controls.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control_aa730aeda4517f40bc48ba1e46ebded77}{Control}} ()
+\item 
+\mbox{\hyperlink{class_control_a0d3513bace3d36f14f547ad1c6c8a8b5}{Control}} (char up, char down, char left, char right)
+\item 
+const char \mbox{\hyperlink{class_control_a4a202e9a9d971ac7bf854e9fb05c0e48}{get\+Up}} () const
+\item 
+const char \mbox{\hyperlink{class_control_a0d8b3ae6e3e8a445f7255524b99940a0}{get\+Down}} () const
+\item 
+const char \mbox{\hyperlink{class_control_a13fcff5ea70af72ac1bcbc24466ca5e1}{get\+Left}} () const
+\item 
+const char \mbox{\hyperlink{class_control_af1bc6234e180c8899a31e5b4b50e046c}{get\+Right}} () const
+\item 
+virtual \mbox{\hyperlink{class_control_aa7caa24b2044c5957a07f5e6f22a7507}{\texorpdfstring{$\sim$}{\string~}\+Control}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class contol to set the chars that each player will use to move 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_control_aa730aeda4517f40bc48ba1e46ebded77}\label{class_control_aa730aeda4517f40bc48ba1e46ebded77} 
+\index{Control@{Control}!Control@{Control}}
+\index{Control@{Control}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{Control()}{Control()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Control\+::\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor setting all the chars to \textquotesingle{} \textquotesingle{} \Hypertarget{class_control_a0d3513bace3d36f14f547ad1c6c8a8b5}\label{class_control_a0d3513bace3d36f14f547ad1c6c8a8b5} 
+\index{Control@{Control}!Control@{Control}}
+\index{Control@{Control}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{Control()}{Control()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Control\+::\+Control (\begin{DoxyParamCaption}\item[{char}]{up,  }\item[{char}]{down,  }\item[{char}]{left,  }\item[{char}]{right }\end{DoxyParamCaption})}
+
+Parametric constructor 
+\begin{DoxyParams}{Parameters}
+{\em up} & is what char controls the up direction \\
+\hline
+{\em down} & is what char controls the down direction \\
+\hline
+{\em left} & is what controls the left direction \\
+\hline
+{\em right} & is what controls the right direction \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_control_aa7caa24b2044c5957a07f5e6f22a7507}\label{class_control_aa7caa24b2044c5957a07f5e6f22a7507} 
+\index{Control@{Control}!````~Control@{\texorpdfstring{$\sim$}{\string~}Control}}
+\index{````~Control@{\texorpdfstring{$\sim$}{\string~}Control}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Control()}{\string~Control()}}
+{\footnotesize\ttfamily virtual Control\+::\texorpdfstring{$\sim$}{\string~}\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor because we don\textquotesingle{}t have any dynamic variables 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_control_a0d8b3ae6e3e8a445f7255524b99940a0}\label{class_control_a0d8b3ae6e3e8a445f7255524b99940a0} 
+\index{Control@{Control}!getDown@{getDown}}
+\index{getDown@{getDown}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{getDown()}{getDown()}}
+{\footnotesize\ttfamily const char Control\+::get\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the down char \Hypertarget{class_control_a13fcff5ea70af72ac1bcbc24466ca5e1}\label{class_control_a13fcff5ea70af72ac1bcbc24466ca5e1} 
+\index{Control@{Control}!getLeft@{getLeft}}
+\index{getLeft@{getLeft}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{getLeft()}{getLeft()}}
+{\footnotesize\ttfamily const char Control\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the left char \Hypertarget{class_control_af1bc6234e180c8899a31e5b4b50e046c}\label{class_control_af1bc6234e180c8899a31e5b4b50e046c} 
+\index{Control@{Control}!getRight@{getRight}}
+\index{getRight@{getRight}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{getRight()}{getRight()}}
+{\footnotesize\ttfamily const char Control\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the rigth char \Hypertarget{class_control_a4a202e9a9d971ac7bf854e9fb05c0e48}\label{class_control_a4a202e9a9d971ac7bf854e9fb05c0e48} 
+\index{Control@{Control}!getUp@{getUp}}
+\index{getUp@{getUp}!Control@{Control}}
+\doxysubsubsection{\texorpdfstring{getUp()}{getUp()}}
+{\footnotesize\ttfamily const char Control\+::get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the up char 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{controls_8hpp}{controls.\+hpp}}\item 
+Source/\mbox{\hyperlink{controls_8cpp}{controls.\+cpp}}\end{DoxyCompactItemize}

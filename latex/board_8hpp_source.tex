@@ -1,0 +1,43 @@
+\doxysection{board.\+hpp}
+\hypertarget{board_8hpp_source}{}\label{board_8hpp_source}\index{Headers/board.hpp@{Headers/board.hpp}}
+\mbox{\hyperlink{board_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{point_8hpp}{point.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_board}{Board}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<std::vector<char>>\ grid;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_af74f0d4b43e5aa3faea16d7c6407b05e}{clear}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_board_a8359d2ab9919aea4fe3caa7991ba8fb4}{notBorder}}(\mbox{\hyperlink{class_point}{Point}}\ position);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a11306addbdcb6f710d19d78de3f1bff2}{setWidth}}(\textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a546dd77334e251ac1c307a9c06699e91}{setHeight}}(\textcolor{keywordtype}{int}\ a);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a3d1c8f17d1840f319641bb8fe1fb6d62}{setCell}}(\mbox{\hyperlink{class_point}{Point}}\ position,\ \textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_board_abc7242ca946f55900d2eb12529b22779}{getCell}}(\mbox{\hyperlink{class_point}{Point}}\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_board_a31bdad2985e3b4857a383dd2da8e8e27}{getWidth}}\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_board_a888725ae3b1177a60a8f77299c1c939a}{getHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a56a874d86b1fa1068d6f29b3af559bcd}{generateGrid}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_board_a6ca77471cf4df32ec4ea1da795065327}{render}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_board_a1bceb44e5a334606a576482c8af0d3f8}{\string~Board}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

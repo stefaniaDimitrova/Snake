@@ -1,0 +1,341 @@
+\doxysection{Snake Class Reference}
+\hypertarget{class_snake}{}\label{class_snake}\index{Snake@{Snake}}
+
+
+{\ttfamily \#include $<$snake.\+hpp$>$}
+
+Inheritance diagram for Snake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_snake}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}{Snake}} ()
+\item 
+\mbox{\hyperlink{class_snake_a191626e3eb8fe33d5ced4f01639be16c}{Snake}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}, \mbox{\hyperlink{class_board}{Board}} \&board, \mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction, \mbox{\hyperlink{class_control}{Control}} \mbox{\hyperlink{class_snake_ad1451373fb7a102b99d091271b0235bd}{ctrl}})
+\item 
+const int \mbox{\hyperlink{class_snake_af92efe920f4aca210087edd03c511ce8}{get\+Length}} () const
+\item 
+int \mbox{\hyperlink{class_snake_af7772a7b4723a9d9bb14bf415c10fce2}{get\+Speed}} () const
+\item 
+bool \mbox{\hyperlink{class_snake_a437dd7cfa10d8498adf5855b79a3396c}{get\+Assisted}} () const
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_snake_a8c9a1ed59c03e2cce021fb8cdddb9b43}{get\+Head}} () const
+\item 
+void \mbox{\hyperlink{class_snake_a244b261d6ae70512093964025c974d43}{move\+Head}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \&body\+Part)
+\item 
+void \mbox{\hyperlink{class_snake_a1a8fccf39cfee47d8c6b750c83d71959}{Move\+Body}} (\mbox{\hyperlink{class_point}{Point}} head)
+\item 
+void \mbox{\hyperlink{class_snake_a588281a1a35185966b8dd587295e2197}{set\+Speed}} (int \mbox{\hyperlink{class_snake_a18db40ca997cae2a8be85987330010f1}{speed}})
+\item 
+void \mbox{\hyperlink{class_snake_a4e1fff21021710f7ccda76b79b4c6618}{set\+Objective}} (\mbox{\hyperlink{class_point}{Point}} obj)
+\item 
+void \mbox{\hyperlink{class_snake_ac9f960a03092210819f320bf94cad8b8}{set\+Assisted}} (bool a)
+\item 
+bool \mbox{\hyperlink{class_snake_ab182c6c6e640d6aeb50a41ab361c406f}{is\+Valid\+Position}} (\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_snake_a23b2fda5ac88365f6d2ec08b88b69038}{position}}, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_snake_a2c705b211d1432af5f63a0452720e9d6}{bfs}} (\mbox{\hyperlink{class_board}{Board}} \&board, \mbox{\hyperlink{class_point}{Point}} start, \mbox{\hyperlink{class_point}{Point}} food)
+\item 
+void \mbox{\hyperlink{class_snake_ab41b0f4ab9bdf8be08e0286a287350f3}{assisted\+Move}} (\mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+char \mbox{\hyperlink{class_snake_a1a9faa74a5f68ee909c77cd3543f8225}{determine\+Input}} (\mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+void \mbox{\hyperlink{class_snake_a17cd096fb601771330123253347965b7}{change\+Direction}} (char input)
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_snake_a15d3fe79a9c50a2975ccaa3f525759c1}{get\+Next\+Position}} (\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_snake_a23b2fda5ac88365f6d2ec08b88b69038}{position}}, \mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\item 
+virtual void \mbox{\hyperlink{class_snake_a8db3c45cf86d3b7f6db9190ef01c79dd}{update}} (char input, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+bool \mbox{\hyperlink{class_snake_a48625a68bb2e9f58f96f070db3c76598}{check\+Collision}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} head, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+virtual void \mbox{\hyperlink{class_snake_a40c9f48d752228c0b901c4eaa4f33abb}{on\+Collision}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual void \mbox{\hyperlink{class_snake_ac443711d4119df857a58be6e63a75a94}{render}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual \mbox{\hyperlink{class_snake_a756d5c991a9f77087c4a3f1b6829fd0b}{\texorpdfstring{$\sim$}{\string~}\+Snake}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_game_object_a43a13cd2a8fd47d51eed390c8fec455d}{Game\+Object}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}, \mbox{\hyperlink{class_board}{Board}} \&board)
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_aa4dd19d6b0ea5701d860b64b08435ae6}{get\+Position}} () const
+\item 
+char \mbox{\hyperlink{class_game_object_ab80f990104593c8eb0e3f2169e211f09}{get\+Symbol}} () const
+\item 
+void \mbox{\hyperlink{class_game_object_aeff56b8c1659f65946a424b9c7d90c78}{set\+Position}} (\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}})
+\item 
+void \mbox{\hyperlink{class_game_object_ae0e1b9518de68be9c5da847139727792}{set\+Symbol}} (char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}})
+\item 
+virtual void \mbox{\hyperlink{class_game_object_acbd2bfcdcfbd1aa8e71cbade81b58944}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board) override
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a35423918474738484ed76608458adf6d}{render}} (\mbox{\hyperlink{class_board}{Board}} \&other)
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{on\+Collision}} (\mbox{\hyperlink{class_board}{Board}} \&board)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_spawner_a7c966e162e0be343408d65678132bc17}{spawn}} (\mbox{\hyperlink{class_board}{Board}} \&board)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_snake_abaf7733b034e6e9fab2e4025e25164dc}{collided}} = false
+\item 
+bool \mbox{\hyperlink{class_snake_a9e1d9c2d4ac5081d68357b9f346266b0}{assisted}} = false
+\item 
+int \mbox{\hyperlink{class_snake_a18db40ca997cae2a8be85987330010f1}{speed}} = 1
+\item 
+int \mbox{\hyperlink{class_snake_a23b2fda5ac88365f6d2ec08b88b69038}{position}} = 0
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_snake_a3113dea238dfebf4d8c6ef6a37ce4562}{objective}}
+\item 
+int \mbox{\hyperlink{class_snake_aba2f9d9cbf10b4be4887e5bc9612bfde}{length}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \mbox{\hyperlink{class_snake_a3456f6e603729468d9b048fae4bf7e72}{shortest\+\_\+path}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_snake_a1479650cc20d2e5d5035bfd2f249516a}{body}}
+\item 
+\mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_snake_a319563098b5aab4c72938fe10295366d}{current\+Direction}}
+\item 
+\mbox{\hyperlink{class_control}{Control}} \mbox{\hyperlink{class_snake_ad1451373fb7a102b99d091271b0235bd}{ctrl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_game_object_a85dcfba7d42ed092599489a475b9b5a1}{position}}
+\item 
+char \mbox{\hyperlink{class_game_object_ad01be8a39c9b4b5aff2b9aab31c352a3}{symbol}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \doxylink{class_snake}{Snake} ~\newline
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}\label{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \Hypertarget{class_snake_a191626e3eb8fe33d5ced4f01639be16c}\label{class_snake_a191626e3eb8fe33d5ced4f01639be16c} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}\item[{char}]{symbol,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board,  }\item[{\mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction,  }\item[{\mbox{\hyperlink{class_control}{Control}}}]{ctrl }\end{DoxyParamCaption})}
+
+Paametric constructor \Hypertarget{class_snake_a756d5c991a9f77087c4a3f1b6829fd0b}\label{class_snake_a756d5c991a9f77087c4a3f1b6829fd0b} 
+\index{Snake@{Snake}!````~Snake@{\texorpdfstring{$\sim$}{\string~}Snake}}
+\index{````~Snake@{\texorpdfstring{$\sim$}{\string~}Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Snake()}{\string~Snake()}}
+{\footnotesize\ttfamily virtual Snake\+::\texorpdfstring{$\sim$}{\string~}\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Default destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_snake_ab41b0f4ab9bdf8be08e0286a287350f3}\label{class_snake_ab41b0f4ab9bdf8be08e0286a287350f3} 
+\index{Snake@{Snake}!assistedMove@{assistedMove}}
+\index{assistedMove@{assistedMove}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{assistedMove()}{assistedMove()}}
+{\footnotesize\ttfamily void Snake\+::assisted\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})}
+
+Takes care of the player\textquotesingle{}s movement id they are controlled by the computer \Hypertarget{class_snake_a2c705b211d1432af5f63a0452720e9d6}\label{class_snake_a2c705b211d1432af5f63a0452720e9d6} 
+\index{Snake@{Snake}!bfs@{bfs}}
+\index{bfs@{bfs}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ Snake\+::bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{start,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{food }\end{DoxyParamCaption})}
+
+Implementation of the BFS algorithm which calculates the shortest possible route for the snake to reach the food \begin{DoxyReturn}{Returns}
+a vector of points that represent the players path to its destination 
+\end{DoxyReturn}
+\Hypertarget{class_snake_a17cd096fb601771330123253347965b7}\label{class_snake_a17cd096fb601771330123253347965b7} 
+\index{Snake@{Snake}!changeDirection@{changeDirection}}
+\index{changeDirection@{changeDirection}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{changeDirection()}{changeDirection()}}
+{\footnotesize\ttfamily void Snake\+::change\+Direction (\begin{DoxyParamCaption}\item[{char}]{input }\end{DoxyParamCaption})}
+
+Method to change the player\textquotesingle{}s movement \Hypertarget{class_snake_a48625a68bb2e9f58f96f070db3c76598}\label{class_snake_a48625a68bb2e9f58f96f070db3c76598} 
+\index{Snake@{Snake}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily bool Snake\+::check\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}}}]{head,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})}
+
+Method to check if the player has collided \Hypertarget{class_snake_a1a9faa74a5f68ee909c77cd3543f8225}\label{class_snake_a1a9faa74a5f68ee909c77cd3543f8225} 
+\index{Snake@{Snake}!determineInput@{determineInput}}
+\index{determineInput@{determineInput}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{determineInput()}{determineInput()}}
+{\footnotesize\ttfamily char Snake\+::determine\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+Determine what key was pressed based on the movement\textquotesingle{}s direction \Hypertarget{class_snake_a437dd7cfa10d8498adf5855b79a3396c}\label{class_snake_a437dd7cfa10d8498adf5855b79a3396c} 
+\index{Snake@{Snake}!getAssisted@{getAssisted}}
+\index{getAssisted@{getAssisted}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getAssisted()}{getAssisted()}}
+{\footnotesize\ttfamily bool Snake\+::get\+Assisted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for assisted \Hypertarget{class_snake_a8c9a1ed59c03e2cce021fb8cdddb9b43}\label{class_snake_a8c9a1ed59c03e2cce021fb8cdddb9b43} 
+\index{Snake@{Snake}!getHead@{getHead}}
+\index{getHead@{getHead}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Snake\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the head \Hypertarget{class_snake_af92efe920f4aca210087edd03c511ce8}\label{class_snake_af92efe920f4aca210087edd03c511ce8} 
+\index{Snake@{Snake}!getLength@{getLength}}
+\index{getLength@{getLength}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily const int Snake\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the length \Hypertarget{class_snake_a15d3fe79a9c50a2975ccaa3f525759c1}\label{class_snake_a15d3fe79a9c50a2975ccaa3f525759c1} 
+\index{Snake@{Snake}!getNextPosition@{getNextPosition}}
+\index{getNextPosition@{getNextPosition}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getNextPosition()}{getNextPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Snake\+::get\+Next\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position,  }\item[{\mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+Mthod to tell the player what he next position will be based on their current position and their direction \Hypertarget{class_snake_af7772a7b4723a9d9bb14bf415c10fce2}\label{class_snake_af7772a7b4723a9d9bb14bf415c10fce2} 
+\index{Snake@{Snake}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily int Snake\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the speed \Hypertarget{class_snake_ab182c6c6e640d6aeb50a41ab361c406f}\label{class_snake_ab182c6c6e640d6aeb50a41ab361c406f} 
+\index{Snake@{Snake}!isValidPosition@{isValidPosition}}
+\index{isValidPosition@{isValidPosition}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{isValidPosition()}{isValidPosition()}}
+{\footnotesize\ttfamily bool Snake\+::is\+Valid\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{position,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})}
+
+Checks if a position is valid \Hypertarget{class_snake_a1a8fccf39cfee47d8c6b750c83d71959}\label{class_snake_a1a8fccf39cfee47d8c6b750c83d71959} 
+\index{Snake@{Snake}!MoveBody@{MoveBody}}
+\index{MoveBody@{MoveBody}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{MoveBody()}{MoveBody()}}
+{\footnotesize\ttfamily void Snake\+::\+Move\+Body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{head }\end{DoxyParamCaption})}
+
+Moves the snakes body with one cell in the direction the head is moving 
+\begin{DoxyParams}{Parameters}
+{\em head} & is the next position the body has to have \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_snake_a244b261d6ae70512093964025c974d43}\label{class_snake_a244b261d6ae70512093964025c974d43} 
+\index{Snake@{Snake}!moveHead@{moveHead}}
+\index{moveHead@{moveHead}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{moveHead()}{moveHead()}}
+{\footnotesize\ttfamily void Snake\+::move\+Head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{body\+Part }\end{DoxyParamCaption})}
+
+Method that moves the first element of the body vector (the snake\textquotesingle{}s head) \Hypertarget{class_snake_a40c9f48d752228c0b901c4eaa4f33abb}\label{class_snake_a40c9f48d752228c0b901c4eaa4f33abb} 
+\index{Snake@{Snake}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily void Snake\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method to set player\textquotesingle{}s behaviour when they collide 
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a7b91f7f59ab606926948e41b8709d65b}{Game\+Object}}.
+
+\Hypertarget{class_snake_ac443711d4119df857a58be6e63a75a94}\label{class_snake_ac443711d4119df857a58be6e63a75a94} 
+\index{Snake@{Snake}!render@{render}}
+\index{render@{render}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Snake\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Method to put the player on the board 
+
+Reimplemented from \mbox{\hyperlink{class_game_object_a35423918474738484ed76608458adf6d}{Game\+Object}}.
+
+\Hypertarget{class_snake_ac9f960a03092210819f320bf94cad8b8}\label{class_snake_ac9f960a03092210819f320bf94cad8b8} 
+\index{Snake@{Snake}!setAssisted@{setAssisted}}
+\index{setAssisted@{setAssisted}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{setAssisted()}{setAssisted()}}
+{\footnotesize\ttfamily void Snake\+::set\+Assisted (\begin{DoxyParamCaption}\item[{bool}]{a }\end{DoxyParamCaption})}
+
+Setter for the assisted \Hypertarget{class_snake_a4e1fff21021710f7ccda76b79b4c6618}\label{class_snake_a4e1fff21021710f7ccda76b79b4c6618} 
+\index{Snake@{Snake}!setObjective@{setObjective}}
+\index{setObjective@{setObjective}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{setObjective()}{setObjective()}}
+{\footnotesize\ttfamily void Snake\+::set\+Objective (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{obj }\end{DoxyParamCaption})}
+
+Setter for the objective \Hypertarget{class_snake_a588281a1a35185966b8dd587295e2197}\label{class_snake_a588281a1a35185966b8dd587295e2197} 
+\index{Snake@{Snake}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void Snake\+::set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+Setter for the speed \Hypertarget{class_snake_a8db3c45cf86d3b7f6db9190ef01c79dd}\label{class_snake_a8db3c45cf86d3b7f6db9190ef01c79dd} 
+\index{Snake@{Snake}!update@{update}}
+\index{update@{update}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Snake\+::update (\begin{DoxyParamCaption}\item[{char}]{input,  }\item[{\mbox{\hyperlink{class_board}{Board}} \&}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Method to update the player\textquotesingle{}s condition 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_snake_a9e1d9c2d4ac5081d68357b9f346266b0}\label{class_snake_a9e1d9c2d4ac5081d68357b9f346266b0} 
+\index{Snake@{Snake}!assisted@{assisted}}
+\index{assisted@{assisted}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{assisted}{assisted}}
+{\footnotesize\ttfamily bool Snake\+::assisted = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a1479650cc20d2e5d5035bfd2f249516a}\label{class_snake_a1479650cc20d2e5d5035bfd2f249516a} 
+\index{Snake@{Snake}!body@{body}}
+\index{body@{body}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$>$ Snake\+::body\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_abaf7733b034e6e9fab2e4025e25164dc}\label{class_snake_abaf7733b034e6e9fab2e4025e25164dc} 
+\index{Snake@{Snake}!collided@{collided}}
+\index{collided@{collided}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{collided}{collided}}
+{\footnotesize\ttfamily bool Snake\+::collided = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+Variables for the snake collided -\/ checks if the player has collided with a wall assisted -\/ checks id the player is controlled by the computer speed -\/ keeps track of the speed int position -\/ keeps track of the index while moving around the shortest path objective -\/ the position that the player controlled by the computer has to reach length -\/ keeps track of the player\textquotesingle{}s body shortest\+\_\+path -\/ holds the most efficient way for the player to reach its destination body -\/ a vector that keeps the snakes body current\+Direction -\/ keeps track of the direction the player is moving ctrl -\/ the controls the player uses to move \Hypertarget{class_snake_ad1451373fb7a102b99d091271b0235bd}\label{class_snake_ad1451373fb7a102b99d091271b0235bd} 
+\index{Snake@{Snake}!ctrl@{ctrl}}
+\index{ctrl@{ctrl}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{ctrl}{ctrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_control}{Control}} Snake\+::ctrl\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a319563098b5aab4c72938fe10295366d}\label{class_snake_a319563098b5aab4c72938fe10295366d} 
+\index{Snake@{Snake}!currentDirection@{currentDirection}}
+\index{currentDirection@{currentDirection}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{currentDirection}{currentDirection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{direction_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Snake\+::current\+Direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_aba2f9d9cbf10b4be4887e5bc9612bfde}\label{class_snake_aba2f9d9cbf10b4be4887e5bc9612bfde} 
+\index{Snake@{Snake}!length@{length}}
+\index{length@{length}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily int Snake\+::length\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a3113dea238dfebf4d8c6ef6a37ce4562}\label{class_snake_a3113dea238dfebf4d8c6ef6a37ce4562} 
+\index{Snake@{Snake}!objective@{objective}}
+\index{objective@{objective}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{objective}{objective}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_point}{Point}} Snake\+::objective\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a23b2fda5ac88365f6d2ec08b88b69038}\label{class_snake_a23b2fda5ac88365f6d2ec08b88b69038} 
+\index{Snake@{Snake}!position@{position}}
+\index{position@{position}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily int Snake\+::position = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a3456f6e603729468d9b048fae4bf7e72}\label{class_snake_a3456f6e603729468d9b048fae4bf7e72} 
+\index{Snake@{Snake}!shortest\_path@{shortest\_path}}
+\index{shortest\_path@{shortest\_path}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{shortest\_path}{shortest\_path}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point}{Point}}$>$ Snake\+::shortest\+\_\+path\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_snake_a18db40ca997cae2a8be85987330010f1}\label{class_snake_a18db40ca997cae2a8be85987330010f1} 
+\index{Snake@{Snake}!speed@{speed}}
+\index{speed@{speed}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int Snake\+::speed = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{snake_8hpp}{snake.\+hpp}}\item 
+Source/\mbox{\hyperlink{snake_8cpp}{snake.\+cpp}}\end{DoxyCompactItemize}
